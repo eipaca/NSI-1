@@ -123,7 +123,7 @@ nav:
   #  - ihm-sur-web/index.md
   - Langages et programmation: 
     - langages-et-programmation/index.md
-    - Variables et affectation: langages-et-programmation/1-variables-affectation.md
+  #  - Variables et affectation: langages-et-programmation/1-variables-affectation.md
   #  - Opérations, comparaisons et expressions: langages-et-programmation/2-operations-comparaisons-expressions.md
   #  - Instructions: langages-et-programmation/3-instructions.md
   #  - Constructions élémentaires: langages-et-programmation/4-constructions-elementaires.md
