@@ -227,7 +227,7 @@ Les opérations de comparaison usuelless permettent de comparer des valeurs de m
 
 [^2.9]
 
-[^2.9]: Préfèrer `is` et `is not` à `==` et `!=` pour comparer à `None`, par exemple `a is not None` plutôt que `a != None`.
+[^2.9]: Préférer `is` et `is not` à `==` et `!=` pour comparer à `None`, par exemple `a is not None` plutôt que `a != None`.
 
 :warning: Une erreur courante consiste à confondre l'opérateur de comparaison `==` pour vérifier si deux valeurs sont égales avec l'affectation qui utilise le signe `=` !
 
