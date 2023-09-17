@@ -261,7 +261,7 @@ True
 
 
 
-Les chaines de caractères, quant à elles, sont comparées en ordre lexicographique, c’est-à-dire caractère par caractère comme l'ordre des mots dans un dictionnaire :  on commence par comparer le premier caractère de chaque chaîne, puis en cas d’égalité le deuxième de chaque, et ainsi de suite jusqu'à trouver un caractère qui est différent l'autre[^2.10]. 
+Les chaines de caractères, quant à elles, sont comparées en ordre lexicographique, c’est-à-dire caractère par caractère comme l'ordre des mots dans un dictionnaire :  on commence par comparer le premier caractère de chaque chaîne, puis en cas d’égalité le deuxième de chaque, et ainsi de suite jusqu'à trouver un caractère qui est différent de l'autre[^2.10]. 
 
 [^2.10]: Les comparaisons entre chaînes de caractère se font en comparant le point de code Unicode de chaque caractère. Il est donné par la fonction `ord()` (la fonction `chr()` fait ‘inverse ). Par exemple, `ord('A')` vaut `65` et `ord('a')` vaut `97` donc `'A' < 'a'` est vrai.
 
