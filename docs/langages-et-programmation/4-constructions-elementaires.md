@@ -182,7 +182,7 @@ Ces deux programmes font exactement la même chose, mais le second est plsu lisi
     A[annee%4 == 0] --> |True| B;
     A -->|False| C{pas bissextile};
     B[annee%100 != 0] --> |True| D{bissextile};
-    B --> |True| E;
+    B --> |False| E;
     E[annee%400 == 0] --> |True| F{bissextile};
     E --> |False| G{pas bissextile};
     ```
@@ -226,7 +226,7 @@ Ces deux programmes font exactement la même chose, mais le second est plsu lisi
     annee = int(input('annee: ') )
     if annee % 400 == 0:        # si annee est divisible par 400
         print(annee, "est bissextile")
-    elif annee % 400 == 0:        # sinon, si annee est divisible par 100 (et pas par 400 car déjà testé)
+    elif annee % 100 == 0:        # sinon, si annee est divisible par 100 (et pas par 400 car déjà testé)
         print(annee, "n'est pas est bissextile")
     elif annee % 4 == 0:          # sinon, si annee est divisible par 4 (et pas par 100 et 400 car déjà testés)
             print(annee, "est bissextile")        
