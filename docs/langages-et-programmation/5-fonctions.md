@@ -473,7 +473,7 @@ def carre_cube(x):
 print(carre_cube(5))
 ```
 
-affiche `(25, 125)`
+affiche `(25, 125)`.
 
 
 !!! abstract "Cours"
