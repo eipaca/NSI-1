@@ -437,7 +437,7 @@ Appelons `prix(100, 5)` et affectons la valeur retournée par ces fonctions à u
 
     p = prix(100, 5)
     ```
-    Dans ce cas la variable `suivant` a la valeur `165` !
+    Dans ce cas la variable `p` a bien la valeur `105` comme attendu.
 
 Dans le doute, de façon générale, il faut éviter d’afficher un résultat avec `print()` dans une fonction autre que la fonction `main()` et préfèrer renvoyer le résultat avec `return`.
 
