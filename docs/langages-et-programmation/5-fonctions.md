@@ -470,9 +470,10 @@ Pour finir, Une fonction peut aussi renvoyer plusieurs valeurs en même temps, s
 def carre_cube(x):
    return x**2, x**3
 
-print(acrre)
-``` 
+print(carre_cube(5))
+```
 
+affiche `(25, 125)`
 
 
 !!! abstract "Cours"
