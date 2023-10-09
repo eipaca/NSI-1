@@ -342,12 +342,6 @@ et d'afficher les prix qui nous intéressent :
 165
 ```
 
-``` py
->>> prix(100, 5)
-105.0
->>> prix(100, 5) + prix(50)
-165
-```
 
 Voyons plus en détail la différence entre les deux fonctions avec `print()` et `return`. 
 
