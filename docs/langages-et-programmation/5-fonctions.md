@@ -438,8 +438,9 @@ Appelons `prix(100, 5)` et affectons la valeur retournée par ces fonctions à u
 
     p = prix(100, 5)
     ```
-    Dans ce cas la variable `p` a bien la valeur `105` comme attendu.
-
+	Dans ce cas la variable `p` a bien la valeur `105` comme attendu.
+	
+	
 Dans le doute, de façon générale, il faut éviter d’afficher un résultat avec `print()` dans une fonction autre que la fonction `main()` et préfèrer renvoyer le résultat avec `return`.
 
 Un autre point important à noter est qu'une fonction se termine immédiatement dès qu’une instruction `return` est exécutée. 
@@ -475,6 +476,7 @@ print(carre_cube(5))
 ```
 
 affiche `(25, 125)`.
+
 
 
 !!! abstract "Cours"
@@ -554,3 +556,299 @@ affiche `(25, 125)`.
 
 
 
+
+
+        
+##	Fonction lambda
+
+!!! abstract "Cours"
+    En Python, les fonctions lambda sont des fonctions extrêmement courtes, limitées à une seule expression, sans utiliser le mot-clé `def`.  
+    ``` py 
+    nom_de_fonction = lambda param1, param2,…: expression
+    ```
+
+Prenons par exemple une fonction qui ajoute deux valeurs :
+``` py
+>>> somme = lambda x, y: x + y
+>>> somme(3, 5)
+8
+```
+
+Ici la fonction lambda est définie par l'expression `lambda x, y: x + y` qui comporte :
+
+- le mot réservé `lambda`,
+- suivi de deux paramètres `x` et `y` placés avant les deux-points,
+- deux-points `:`,
+- l'expression de la valeur renvoyée `x + y`, placée après les deux-points.
+
+Le signe `=` affecte cette fonction à une variable, ici `somme`, c'est le nom de cette fonction.
+
+ L'instruction `somme(3, 5)` permet ensuite d'appeler la fonction avec deux arguments `3` et `5`.
+
+
+!!! question "Exercice corrigé" 
+	Écrire la fonction cube qui renvoie le cube d’un nombre sous formes classique et lambda.
+
+??? Success "Réponse"
+    ``` py 
+    def cube(y): 
+       return y**3
+    ```
+    et 
+
+    ``` py 
+    cube = lambda y: y**3 
+    ```
+
+
+Réduite à une seule expression, les fonctions lambda permettent d'utiliser une instruction conditionnelle écrite sous une forme un peu différente que [vue précedemment](4-constructions-elementaires.md#instructions-conditionnelles) : 
+
+``` py
+>>> entre_10_et_20 = lambda x: True if (x > 10 and x < 20) else False                     
+>>> entre_10_et_20(5)
+False
+```
+ 
+##	Portée de variables
+
+!!! abstract "Cours"
+    La **portée** d'une variable désigne les endroits du programme où cette variable **existe et peut être utilisée**. En Python, la portée d'une variable commence dès sa première affectation.
+
+Exemple : Les programmes suivants affichent un message d'erreur
+
+=== "Programme 1"
+    ``` py 
+    print(a)
+    a = 1
+    ```
+    Ce programme essaie d'afficher la variable `a` avant qu'elle ne soit définie, il affiche un message d'erreur :
+
+    ```
+    >>>
+    Traceback (most recent call last):
+    File "<module1>", line 1, in <module>
+    NameError: name 'a' is not defined
+    ```
+
+=== "Programme 2"
+    ``` py 
+    a = a + 1
+    print(a)
+    ```
+    Ce programme essaie d'affecter à la variable `a` une valeur calculée en utilisant `a` avant qu'elle ne soit définie, il affiche un message d'erreur :
+
+    ```
+    >>>
+    Traceback (most recent call last):
+    File "<module1>", line 1, in <module>
+    NameError: name 'a' is not defined
+    ```
+
+
+
+###	Variables locales
+
+!!! abstract "Cours"
+    Une variable définie à l’intérieur d’une fonction est appelée **variable locale**. Elle ne peut être utilisée que localement c’est-à-dire qu’à l’intérieur de la fonction qui l’a définie. 
+
+Tenter d'utiliser une variable locale depuis l’extérieur de la fonction qui l’a définie provoquera une erreur. 
+
+Exemple : 
+
+``` py
+def affiche_a():
+    a = 1
+    print(f'valeur de a dans affiche_a : {a}')
+
+affiche_a()
+print(f'valeur de a dans le programme : {a}')
+```
+La variable `a` elle est locale à `affiche_a`, le programme suivant affiche un message d'erreur :
+
+```
+>>>
+Traceback (most recent call last):
+  File "<module1>", line 6, in <module>
+NameError: name 'a' is not defined
+```
+
+###	Paramètres passés par valeur
+
+Dans les exemples précédents (`est_premier(13`), etc.), les arguments utilisés en appelant les fonctions étaient des valeurs. 
+
+Les arguments utilisés dans l'appel d'une fonction peuvent aussi être des variables ou même des expressions. Les trois appels de fonctions suivants font le même chose :
+
+
+``` py 
+>>> est_premier(13)
+True
+>>> a = 13
+>>> est_premier(a)
+True
+>>> nombre = 6
+>>> est_premier(2*nombre + 1)
+True
+```
+
+Quand un argument de fonction est une variable (ou une expression contenant une variable), par exemple dans le cas de `est_premier(a)`, c'est la valeur de cette variable (ou de cette expression) qui est passée au paramètre correspondant de la fonction. On dit que le paramètre est « passé par valeur ». Des modifications éventuelles de ce paramètre dans la fonction ne modifient pas la valeur de la variable qui a servit d'argument à la fonction. Et c’est le cas même quand le nom de la variable est identique au nom du paramètre de la fonction, c’est seulement sa valeur qui est passée à la fonction. 
+
+!!! abstract "Cours"
+    Une fonction ne peut pas modifier la valeur d’une variable passée en paramètre en dehors de son exécution.  **Les paramètres sont passés par valeur**.
+
+Exemple :
+``` py 
+def ajoute_1(a):
+    a = a + 1
+    print(f'valeur de a dans ajoute_1 : {a}')
+
+a = 1
+ajoute_1(a)
+print(f'valeur de a dans le programme : {a}')
+```
+
+La valeur de a est modifiée en `2` à l'intérieur de la fonction `ajoute_1` pendant son exécution, mais pas dans le programme où elle garde sa valeur initiale de  `1`.
+
+```
+>>> 
+valeur de a dans ajoute_1 : 2
+valeur de a dans le programme : 1
+```
+ 
+###	Variables globales
+
+Sauf exception il est préférable d'utiliser uniquement des variables locales pour faciliter la compréhension des programmes et réduire l’utilisation de mémoire inutile, mais dans certains cas leur portée n’est plus suffisante.
+
+!!! abstract "Cours"
+    Une variable définie en dehors de toute fonction est appelée **variable globale**. Elle est utilisable à travers l’ensemble du programme. 
+
+Elle peut être affichée par une fonction :
+
+``` py 
+def affiche_a():
+    print(f'valeur de a dans affiche_a : {a}')       
+
+a = 1
+affiche_a()
+```
+
+
+Mais ne peut pas être modifiée. 
+
+``` py 
+def affiche_a():
+    a += 1
+    print(f'valeur de a dans affiche_a : {a}')
+
+a = 1
+affiche_a()
+
+```
+Ce programme affiche un message d'erreur :bug: :
+```
+>>>
+Traceback (most recent call last):
+  File "<module1>", line 6, in <module>
+  File "<module1>", line 2, in affiche_a
+UnboundLocalError: local variable 'a' referenced before assignment
+```
+
+On peut néanmoins essayer de lui assigner une nouvelle valeur :
+
+``` py 
+def affiche_a():
+    a = 2
+    print(f'valeur de a dans affiche_a : {a}')
+
+a = 1
+affiche_a()
+print(f'valeur de a dans le programme : {a}')
+```
+
+Mais dans ce cas, Python part du principe que `a` est locale à la fonction, et non plus une variable globale. L’instruction `a = 2` a créé un nouvelle variable locale à la fonction, la variable globale n’a pas changé :
+
+```
+>>>
+valeur de a dans affiche_a : 2
+valeur de a dans le programme : 1
+```
+
+
+
+Dans certaines situations, il serait utile de pouvoir modifier la valeur d’une variable globale dans une fonction et que cette nouvelle valeur soit gardée dans le reste du programme. Pour cela, il faut utiliser le mot clef `global` devant le nom d’une variable globale utilisée localement afin d’indiquer qu'il faut modifier la valeur de la variable globale et non pas créer une variable locale de même nom :
+
+``` py 
+def affiche_a():
+    global a
+    a = 2
+    print(f'valeur de a dans affiche_a : {a}')
+
+a = 1
+affiche_a()
+print(f'valeur de a dans le programme : {a}')
+```
+La variable `a` a été modifiée dans la fonction et que sa nouvelle valeur est gardée dans le reste du programme :
+```
+>>>
+valeur de a dans affiche_a : 2
+valeur de a dans le programme : 2
+```
+
+!!! abstract "Cours"
+    Une variable globale est accessible uniquement en lecture à l’intérieur des fonctions du programme. Pour la modifier il faut utiliser le mot-clé `global`.
+
+ 
+##	Fonction récursive
+
+Une fonction peut être appelée n’importe où dans un programme (après sa définition), y compris par elle-même.
+
+!!! abstract "Cours"
+    Une fonction récursive est une fonction qui peut s'appeler elle-même au cours de son exécution.
+
+Prenons pour exemple une fonction qui renvoie le produit de tous les nombres entiers entre 1 et $n$. Ce produit est appelé factorielle de $n$ et noté $n!$.
+
+$n!  =  1  \times 2  \times 3  \times 4  \times ...  \times (n-1)  \times n$ 
+
+Une simple boucle `for` permet de multiplier tous les entiers allant de `1` à `n` :
+
+``` py 
+def factorielle(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact = fact * i
+    return fact
+```
+
+Mais il est aussi possible de remarquer que $n!  =  (n - 1)!  \times n$ et que $1!  =  1$, ce qui permet d'écrire un programme récursif suivant : 
+ 
+``` py 
+def factorielle_recursive(n):
+    if n == 1:
+        return 1
+    else:
+        return  factorielle_recursive(n-1) * n         # le else est facultatif
+```
+
+:warning: Il est impératif de prévoir une condition d'arrêt à la récursivité, sinon le programme ne s'arrête jamais ! On doit toujours tester en premier la condition d'arrêt, et ensuite, si la condition n'est pas vérifiée, lancer un appel récursif.
+
+
+ 
+!!! question "Exercice corrigé" 
+	Écrire une fonction récursive `compte_a_rebours(n)` qui affiche les nombres entiers à rebours allant de `n` à `0`.
+
+??? Success "Réponse"
+    ``` py linenums="1"
+    def compte_a_rebours(n):
+        if n < 0:
+            pass
+        else:
+            print(n)
+            compte_a_rebours(n-1)
+    ```
+    ou plus simplement :  
+
+    ``` py linenums="1"
+    def compte_a_rebours(n):
+        print(n)
+        if n > 0:
+            compte_a_rebours(n-1)
+    ```
