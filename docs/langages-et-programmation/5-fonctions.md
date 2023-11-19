@@ -400,7 +400,7 @@ Alors quelle est la différence ? Elle apparaît immédiatement si on appelle la
     ```
     Le programme n'affiche rien.
 
-Et si on essaye d'appelle la fonction depuis le programme avec `print(prix(100, 5))`:
+Et si on essaye d'appeller la fonction depuis le programme avec `print(prix(100, 5))`:
 
 === "Fonction avec `print()`"
     ``` py 
@@ -425,10 +425,10 @@ Et si on essaye d'appelle la fonction depuis le programme avec `print(prix(100, 
 
 - Avec `print()` la première fonction `prix`  **affiche** le résultat calculé dans la console mais ce résultat n'est plus utilisable dans la suite du programme, il est perdu ;
 
-- par contre, avec `return` la seconde fonction  **renvoie** le résultat calculé qui peut être utilisé, par exemple pour faire d'autres opérations, pour l'affecter à une variable, ou encore comme argument d'une autre fonction, voire même pour être tout simplement affiché comme par exemple `print(prix(100, 5))`. 
+- par contre, avec `return` la seconde fonction  **renvoie** le résultat calculé qui peut être utilisé par exemple pour faire d'autres opérations, pour l'affecter à une variable, ou encore comme argument d'une autre fonction, voire même pour être tout simplement affiché comme par exemple `print(prix(100, 5))`. 
 
 
-Appelons `prix(100, 5)` et affectons la valeur renvoyée par ces deux fonctions à une variable :
+Appelons `prix(100, 5)` et essayons d'affecter la valeur renvoyée par ces deux fonctions à une variable :
 
 === "Fonction avec `print()`"
     
