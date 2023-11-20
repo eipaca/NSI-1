@@ -30,7 +30,7 @@ if __name__ == '__main__':
 !!! info inline end "Rappel" 
     La fonction `est_premier` doit être est écrite au début du programme, elle doit être définie **avant** d'être appelée.
 
-Ici le programme est écrit dans le même fichier Python que la fonction `est_premier`. Mais se passerait'il si un programme écrit dans un autre fichier Python appelle cette même fonction ? 
+Ici le programme est écrit dans le même fichier Python que la fonction `est_premier`. Mais que se passerait-il si un programme écrit dans un autre fichier Python appelle cette même fonction ? 
 
 Ecrivons un nouveau programme Python qui appelle `est_premier` :
 
