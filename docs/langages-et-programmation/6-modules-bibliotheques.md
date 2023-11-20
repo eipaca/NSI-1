@@ -336,7 +336,7 @@ cos(...)
 
 !!! question "Exercice corrigé" 
 	Réaliser le dessins suivant (dix carrés rouges de 50 pixels de coté), à l'aide du module turtle.
-    [![10-carre-rouge](../assets/6-turtle-10-carres-rouges.png "Dix carrés rouges de 50 pixels de cotés dans une fenêtre turtle")]
+    [![10-carre-rouge](assets/6-turtle-10-carres-rouges.png "Dix carrés rouges de 50 pixels de cotés dans une fenêtre turtle")]
 
 ??? Success "Réponse"
 
