@@ -842,7 +842,7 @@ def factorielle_recursive(n):
 :warning: Il est impératif de prévoir une condition d'arrêt à la récursivité, sinon le programme ne s'arrête jamais ! On doit toujours tester en premier la condition d'arrêt, et ensuite, si la condition n'est pas vérifiée, lancer un appel récursif.
 
 
- 
+
 !!! question "Exercice corrigé" 
 	Écrire une fonction récursive `compte_a_rebours(n)` qui affiche les nombres entiers à rebours allant de `n` à `0`.
 
