@@ -130,15 +130,15 @@ nav:
     - Appel de fonctions: langages-et-programmation/5-fonctions.md
     - Modules et bibliothèques: langages-et-programmation/6-modules-bibliotheques.md
     - Mise au point des programmes et gestion des bugs: langages-et-programmation/7-mise-au-point-gestion-bugs.md
-  - Langages et programmation(2): 
-    - langages-et-programmation-2/index.md
-    - Types de langages: langages-et-programmation-2/1-types-de-langages.md
-    - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
+  #- Langages et programmation(2): 
+  #  - langages-et-programmation-2/index.md
+  #  - Types de langages: langages-et-programmation-2/1-types-de-langages.md
+  #  - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
 
   - Types construits: 
     - types-construits/index.md
-    - p-uplets: types-construits/1-p-uplets.md
-    - Tableaux: types-construits/2-tableaux.md
-    - Dictionnaires: types-construits/3-dictionnaires.md
-    - Comparaisons: types-construits/4-comparaisons.md
-    - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
+   # - p-uplets: types-construits/1-p-uplets.md
+   # - Tableaux: types-construits/2-tableaux.md
+   # - Dictionnaires: types-construits/3-dictionnaires.md
+   # - Comparaisons: types-construits/4-comparaisons.md
+   # - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
