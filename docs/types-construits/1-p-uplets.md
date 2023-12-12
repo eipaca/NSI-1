@@ -28,14 +28,14 @@ Il est aussi possible de créer un p-uplet sans parenthèse :
 <class 'tuple'>
 ```
 
-:warning: Ne pas confondre la virgule de séparateur d’éléments avec le point de séparateur décimal.
+:warning: Ne pas confondre la virgule de séparateur d’éléments avec le point de séparateur décimal, c'est souvent un risque d'erreur :
 
 ``` py
 >>> p_1_elem = (1.2) # Creation d'un tuple avec 1 élément : 1.2 de type float
 >>> p_2_elem = (1, 2) # Creation d'un tuple avec deux éléments :1 et 2 de type int
 ```
 
-Un p-uplet peut contenir d’autres p-uplets.
+Un p-uplet peut même contenir d’autres p-uplets :
 
 !!! note inline end "" 
     Le second p-uplet `(3, 4, 'bye', False)` doit obligatoirement être écrit entre parenthèse dans ce cas.
@@ -58,11 +58,23 @@ D'autres exemples de p-uplets :
     p-uplet avec un seul élément, l'entier `1`, écrit avec une virgule à la fin :
     ``` py
     >>> p_simple = 1,
+    >>> p_simple
+    (1,)
     ``` 
     ou  écrit avec des parenthèses : 
     ``` py
-    >>> p_simple = (1)
+    >>> p_simple = (1,)
+    >>> p_simple
+    (1,)
     ``` 
+-   
+    mais attention, c'est finalement la virgule plus que les parenthèses qui crée le p-uplet, ici `p_simple` est un entier :
+    ``` py
+    >>> p_simple = (1)
+    >>> p_simple
+    1
+    ```
+    
 
 ##	Fonction `len()`
 
@@ -107,7 +119,7 @@ True
 ```
 
 
-L'accès à une partie d'un p-uplet (une « tranche ») se fait sur le modèle `p[début:fin]` [^1.3] pour récupérer tous les éléments, entre les positions `debut` (inclus) et `fin` (**exclu**). 
+L'accès à une partie d'un p-uplet (une « tranche ») se fait sur le modèle `p[début:fin]`[^1.3] pour récupérer tous les éléments, entre les positions `debut` (inclus) et `fin` (**exclu**). 
 
 [^1.3]: Il est aussi possible de préciser un `pas` sur le modèle `p[début:fin:pas]`. 
 
