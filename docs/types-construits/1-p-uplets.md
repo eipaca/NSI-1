@@ -217,7 +217,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
 
 La boucle `for elem in p` est plus simple pour parcourir les valeurs d'un p-uplet, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce p-uplet, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les boucles sur indices de position `while i < len(p):` ou `for i in range(len(p)):`.
 
-:warning: Il est possible d'accéder aux éléments d'un tuple mais **pas de les modifier**.
+:warning: Il est possible d'accéder aux éléments d'un p-uplet mais **pas de les modifier**.
 
 ``` py
 >>> t[1] = 3
@@ -259,7 +259,7 @@ def main():
 
 ## Conversion de type (cast)
 
-La fonction `tuple()`, prend en argument un objet séquentiel (une chaine de caractère par exemple) et renvoie le tuple correspondant :
+La fonction `tuple()`, prend en argument un objet séquentiel (une chaine de caractère par exemple) et renvoie le p-uplet correspondant :
 
 ``` py
 >>> tuple("ABCDEF")
