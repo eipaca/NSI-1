@@ -1,18 +1,18 @@
 # p-uplets (type `tuple`)
 
 !!! abstract "Cours" 
-    Un **p-uplet** (ou n-uplet) est une suite **ordonnée** d’éléments qui ne peuvent **pas être modifiés** (immuables[^1.1] ).
+    Un **p-uplet** (ou n-uplet) est une suite **ordonnée** d'éléments qui ne peuvent **pas être modifiés** (immuables[^1.1] ).
 
     En Python les p-uplets sont du type `tuple`.
 
-Un p-uplet à deux élement est appelé un couple, à trois élements un triplet, à quatre éléments un quadruplet, etc., à n p élements un p-uplet.
+Deux élement ensembles sont appelés un couple, trois élements ensembles sont appelés un triplet, quatre éléments un quadruplet, etc., et par extension p élements ensembles sont appelés un p-uplet.
 
 
 [^1.1]: ou *immutable* en anglais.
 
 ## Création
 
-Un p-uplet est déclaré par une série de valeurs, séparées par des virgules, et le tout encadré par des parenthèses “`( )`”. Il peut contenir des éléments de types différents.
+Un p-uplet est déclaré par une suite de valeurs, séparées par des virgules, et le tout encadré par des parenthèses “`( )`”. Il peut contenir des valeurs de types différents.
 
 ``` py
 >>> p = (1, 2 , 'Hello', True)
@@ -28,14 +28,14 @@ Il est aussi possible de créer un p-uplet sans parenthèse :
 <class 'tuple'>
 ```
 
-:warning: Ne pas confondre la virgule de séparateur d’éléments avec le point de séparateur décimal, c'est souvent un risque d'erreur :
+:warning: Ne pas confondre la virgule qui sépare les différents éléments avec le point utilisé pour les nombres de type `float`, c'est souvent un risque d'erreur :
 
 ``` py
 >>> p_1_elem = (1.2) # Creation d'un tuple avec 1 élément : 1.2 de type float
 >>> p_2_elem = (1, 2) # Creation d'un tuple avec deux éléments :1 et 2 de type int
 ```
 
-Un p-uplet peut même contenir d’autres p-uplets :
+Un p-uplet peut contenir des émléments de types différents, y compris d'autres p-uplets :
 
 !!! note inline end "" 
     Le second p-uplet `(3, 4, 'bye', False)` doit obligatoirement être écrit entre parenthèse dans ce cas.
@@ -68,7 +68,7 @@ D'autres exemples de p-uplets :
     (1,)
     ``` 
 -   
-    mais attention, c'est finalement la virgule plus que les parenthèses qui crée le p-uplet, ici `p_simple` est un entier :
+    mais attention, c'est finalement la virgule plus que les parenthèses qui crée le p-uplet, ici `p_simple` n'est pas un p-uplet, c'est un entier ! 
     ``` py
     >>> p_simple = (1)
     >>> p_simple
@@ -78,7 +78,7 @@ D'autres exemples de p-uplets :
 
 ##	Fonction `len()`
 
-La fonction `len()` renvoie la longueur d'un p-uplet, c'est-à-dire le nombre d'éléments qu’il contient.
+La fonction `len()` renvoie la longueur d'un p-uplet, c'est-à-dire le nombre d'éléments qu'il contient.
 
 ``` py 
 >>> p = (1, 2, 'hello', True)
@@ -88,7 +88,7 @@ La fonction `len()` renvoie la longueur d'un p-uplet, c'est-à-dire le nombre d'
 
 ##	Accès aux éléments
 
-Comme pour les chaines de caractères, les éléments d’un p-uplets `p` sont indexés à partir de `0` jusqu'à `len(p)` **exclus**, c'est-à-dire le dernier élément est en position `len(p) - 1`. Il est possible d'accèder aux éléments par leur index entre crochets. 
+Comme pour les chaines de caractères, la position de chaque élément d'un p-uplets `p` est indexés à partir de `0` jusqu'à `len(p)` **exclus**, c'est-à-dire le dernier élément est en position `len(p) - 1`. Il est possible d'accèder aux éléments par leur indice entre crochets. 
 
 ``` py 
 >>> p = (1, 2, 'hello', True)
@@ -97,9 +97,9 @@ Comme pour les chaines de caractères, les éléments d’un p-uplets `p` sont i
 ```
 
 
-:warning: Le premier élément est à l’index 0.
+:warning: Le premier élément est à l'indice 0.
 
-Le p-uplet peut également être indexé avec des nombres négatifs selon le modèle suivant :
+Les positions des élements d'un p-uplet peuvent également être indexé avec des nombres négatifs selon le modèle suivant :
 
 |`>>> p = `    | `(` | `1,` | `2,` | `'hello,'` | `True` | `)`|
 |---           |-:   |:-:   |:-:   |:-:         |:-:     |:- |
@@ -107,9 +107,9 @@ Le p-uplet peut également être indexé avec des nombres négatifs selon le mod
 |indice négatif|     |-4    |-3    |-2          |-1      | |
 
 
-Les indices négatifs reviennent à compter à partir de la fin, `-1` est du raccourci syntaxique[^1.2] pour `len(p) - 1`. Leur principal avantage est d’accéder au dernier élément d'un p-uplet à l'aide de l'indice `-1` sans pour autant connaître sa longueur. L'avant-dernier élément a lui l'indice `-2`, l'avant-avant dernier l'indice `-3`, etc.
+Les indices négatifs reviennent à compter à partir de la fin, `-1` est du raccourci syntaxique[^1.2] pour `len(p) - 1`. Leur principal avantage est d'accéder au dernier élément d'un p-uplet à l'aide de l'indice `-1` sans pour autant connaître sa longueur. L'avant-dernier élément a lui l'indice `-2`, l'avant-avant dernier l'indice `-3`, etc.
 
-[^1.2]: appelé « sucre syntaxique » pour désigner un raccourci de syntaxe d’un langage de programmation facilitant sa lecture.
+[^1.2]: appelé « sucre syntaxique » pour désigner un raccourci de syntaxe d'un langage de programmation facilitant sa lecture.
 
 ``` py
 >>> p[-1]
@@ -151,7 +151,7 @@ Il est aussi possible de « deballer » ou disperser un p-uplet en affectant tou
 1
 ```
 
-Ce qui pouvait aussi s’écrire sans parenthèse  : 
+Ce qui pouvait aussi s'écrire sans parenthèse  : 
 ``` py 
 >>> a, b, c = 1, 2, 3 
 ```
@@ -166,7 +166,7 @@ True
 False
 ```
 
-Le mot clé `in` permet aussi d’écrire une boucle pour parcourir (ou «itérer sur») toutes les valeurs d'un p-uplet. 
+Le mot clé `in` permet aussi d'écrire une boucle pour parcourir (ou «itérer sur») toutes les valeurs d'un p-uplet. 
 
 Comparons différentes façons pour parcourir un p-uplet `p` :
 
@@ -217,7 +217,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
 
 La boucle `for elem in p` est plus simple pour parcourir les valeurs d'un p-uplet, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce p-uplet, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les boucles sur indices de position `while i < len(p):` ou `for i in range(len(p)):`.
 
-:warning: Il est possible d'accéder aux éléments d’un tuple mais **pas de les modifier**.
+:warning: Il est possible d'accéder aux éléments d'un tuple mais **pas de les modifier**.
 
 ``` py
 >>> t[1] = 3
