@@ -145,7 +145,7 @@ Lorsqu'aucun indice n'est indiqué à gauche ou à droite du symbole deux-points
 (1, 2.5, 'hello', True)
 ```
 
-Il est aussi possible de « deballer » ou disperser un p-uplet en affectant tous ses éléments dans plusieurs variables :
+Il est aussi possible de disperser, ou « déballer »,  un p-uplet en affectant tous ses éléments dans plusieurs variables :
 
 ``` py
 >>> a, b, c, d = (1, 2.5, 'hello', True)
@@ -274,13 +274,19 @@ Appelons maintenant la fonction `cercle_info()` :
 rayon = float(input('Rayon du cercle ?'))
 print('La circonférence du cercle est', cercle_info(rayon)[0])
 print("L'aire du cercle est", cercle_info(rayon)[1])
-
-perimetre, aire = cercle_info(rayon)         # on peut aussi déballer le tuple renvoyé par la fonction 
 ```
 
 Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur du p-uplet renvoyé
 par l'appel de la fonction `cercle_info(rayon)`.
 
+On pouvait aussi disperser ces deux valeurs dans deux variables, pour rendre le code plus lisible : 
+
+``` py linenums="10"
+rayon = float(input('Rayon du cercle ?'))
+perimetre, aire = cercle_info(rayon)         # disperser le tuple renvoyé par cercle_info
+print('La circonférence du cercle est', perimetre)
+print("L'aire du cercle est", aire)
+```
 
 
 ## Conversion de type (cast)
