@@ -256,15 +256,17 @@ Deux opérations sont possibles, l'addition et la multiplication :
 Les p-uplets sont très utiles pour écrire des fonctions renvoyant plusieurs valeurs en même temps :
 
 ``` py linenums="1"
+from math import pi
+
 def cercle_info(r):
     """ (float) -> (float, float)
     Renvoie le p-uplet (circonference, aire) d'un cercle de rayon r
     """
-    c = 2 * 3.14159 * r
-    a = 3.14159 * r**2
+    c = 2 * pi * r
+    a = pi * r**2
     return (c, a)    
 ```
-Noter qu'on peut aussi bien écrire `return (c, a)` que  `return c, a` à la ligne 7.
+Noter qu'on peut aussi bien écrire `return (c, a)` que  `return c, a` à la ligne 9.
 
 Appelons maintenant la fonction `cercle_info()` :
 
