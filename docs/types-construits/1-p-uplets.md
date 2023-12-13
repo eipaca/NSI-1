@@ -226,7 +226,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
 
 La boucle `for elem in p` est plus simple pour parcourir les valeurs d'un p-uplet, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce p-uplet, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les boucles sur indices de position `while i < len(p):` ou `for i in range(len(p)):`.
 
-:warning: Un p-uplet est **immuables**, il est possible d'accéder à ses éléments, mais **pas de les modifier**.
+:warning: Un p-uplet est **immuable**, il est possible d'accéder à ses éléments, mais **pas de les modifier**.
 
 ``` py
 >>> p = (1, 2.5, 'hello', True)
