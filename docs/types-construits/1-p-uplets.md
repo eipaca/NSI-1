@@ -257,7 +257,7 @@ Les p-uplets sont très utiles pour écrire des fonctions renvoyant plusieurs va
 
 ``` py linenums="1"
 def cercle_info(r):
-    """ (float) -> (float float)
+    """ (float) -> (float, float)
     Renvoie le p-uplet (circonference, aire) d'un cercle de rayon r
     """
     c = 2 * 3.14159 * r
@@ -276,7 +276,7 @@ print("L'aire du cercle est", cercle_info(rayon)[1])
 perimetre, aire = cercle_info(rayon)         # on peut aussi déballer le tuple renvoyé par la fonction 
 ```
 
-Noter la syntaxe `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` pour utiliser la première et la seconde valeur renvoyées
+Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur renvoyées
 par l'appel de la fonction `cercle_info(rayon)`.
 
 
