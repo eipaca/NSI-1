@@ -15,7 +15,7 @@ Deux élements ensembles forment un couple, trois élements un triplet, quatre �
 Un p-uplet est déclaré par une suite de valeurs, séparées par des virgules, et le tout encadré par des parenthèses “`( )`”. Il peut contenir des valeurs de types différents.
 
 ``` py
->>> p = (1, 2.5 , 'hello', True)
+>>> p = (1, 2.5, 'hello', True)
 ```
 
 Il est aussi possible de créer un p-uplet sans parenthèse :
@@ -148,7 +148,7 @@ Lorsqu'aucun indice n'est indiqué à gauche ou à droite du symbole deux-points
 Il est aussi possible de « deballer » ou disperser un p-uplet en affectant tous ses éléments dans plusieurs variables :
 
 ``` py
->>> a, b, c, d = (1, 2.5 , 'hello', True)
+>>> a, b, c, d = (1, 2.5, 'hello', True)
 >>> b
 2.5
 ```
@@ -156,13 +156,13 @@ Il est aussi possible de « deballer » ou disperser un p-uplet en affectant tou
 Ce qui pouvait aussi s'écrire sans parenthèse : 
 
 ``` py 
->>> a, b, c, d = 1, 2.5 , 'hello', True
+>>> a, b, c, d = 1, 2.5, 'hello', True
 ```
 
 Le mot clé `in` permet de vérifier si un élément `elem` est présent dans un p-uplet `p`,  `elem in p` renvoie un booléen :
 
 ``` py
->>> p = (1, 2.5 , 'hello', True)
+>>> p = (1, 2.5, 'hello', True)
 >>> 'hello' in p
 True
 >>> 4 in p
@@ -178,7 +178,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
     Il faut gérer l'indice de boucle `i` pour qu'il parcourt toutes les positions des valeurs de `p`, c'est-à-dire l'intialiser à `0` puis l'incrémenter à chaque passage dans la boucle (`i = i + 1`) jusqu'à ce qu'il dépasse `len(p) - 1`.  `p[i]` permet d'accéder à la valeur du p-uplet qui se trouve à la position `i`.
 
     ``` py
-    >>> p = (1, 2.5 , 'hello', True)
+    >>> p = (1, 2.5, 'hello', True)
     >>> i = 0
     >>> while i < len(p):
     ...     print(p[i])
@@ -195,7 +195,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
     Avec `for i in range(len(p)):`, l'indice de boucle `i` prend automatiquement les valeurs allant de  `0` à `len(p) - 1`. `p[i]` permet d'accéder à la valeur du p-uplet qui se trouve à la position `i`.
 
     ``` py
-    >>> p = (1, 2.5 , 'hello', True)
+    >>> p = (1, 2.5, 'hello', True)
     >>> for i in range(len(p)):
     ...     print(p[i])
     ...     
@@ -211,7 +211,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
     `for elem in t` permet d'accéder directement à toutes les valeurs du p-uplet les unes après les autres, sans connaître leurs positions.
 
     ``` py
-    >>> p = (1, 2.5 , 'hello', True)
+    >>> p = (1, 2.5, 'hello', True)
     >>> for elem in p:
     ...     print(elem)
     ...     
@@ -227,7 +227,7 @@ La boucle `for elem in p` est plus simple pour parcourir les valeurs d'un p-uple
 :warning: Un p-uplet est **immuables**, il est possible d'accéder à ses éléments, mais **pas de les modifier**.
 
 ``` py
->>> p = (1, 2.5 , 'hello', True)
+>>> p = (1, 2.5, 'hello', True)
 >>> p[1] = 3
 Traceback (innermost last):
 File "<stdin>", line 1, in ?
