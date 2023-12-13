@@ -5,7 +5,7 @@
 
     En Python les p-uplets sont du type `tuple`.
 
-Deux élement ensembles sont appelés un couple, trois élements ensembles sont appelés un triplet, quatre éléments un quadruplet, etc., et par extension p élements ensembles sont appelés un p-uplet.
+Deux élements ensembles sont appelés un couple, trois élements un triplet, quatre éléments un quadruplet, etc., et par extension $p$ élements ensembles sont appelés un p-uplet.
 
 
 [^1.1]: ou *immutable* en anglais.
@@ -31,11 +31,11 @@ Il est aussi possible de créer un p-uplet sans parenthèse :
 :warning: Ne pas confondre la virgule qui sépare les différents éléments avec le point utilisé pour les nombres de type `float`, c'est souvent un risque d'erreur :
 
 ``` py
->>> p_1_elem = (1.2) # Creation d'un tuple avec 1 élément : 1.2 de type float
->>> p_2_elem = (1, 2) # Creation d'un tuple avec deux éléments :1 et 2 de type int
+>>> p_1_elem = (1.2,3) # Creation d'un tuple avec 2 éléments : 1.2 (type float) et 3 (type int)
+>>> p_2_elem = (1,2,3) # Creation d'un tuple avec trois éléments : 1 2 et 3 (type int)
 ```
 
-Un p-uplet peut contenir des émléments de types différents, y compris d'autres p-uplets :
+Un p-uplet peut contenir des éléments de types différents, y compris d'autres p-uplets :
 
 !!! note inline end "" 
     Le second p-uplet `(3, 4, 'bye', False)` doit obligatoirement être écrit entre parenthèse dans ce cas.
@@ -88,7 +88,7 @@ La fonction `len()` renvoie la longueur d'un p-uplet, c'est-à-dire le nombre d'
 
 ##	Accès aux éléments
 
-Comme pour les chaines de caractères, la position de chaque élément d'un p-uplets `p` est indexés à partir de `0` jusqu'à `len(p)` **exclus**, c'est-à-dire le dernier élément est en position `len(p) - 1`. Il est possible d'accèder aux éléments par leur indice entre crochets. 
+Comme pour les chaines de caractères, la position de chaque élément d'un p-uplet `p` est indexée à partir de `0` jusqu'à `len(p)` **exclu**, c'est-à-dire le dernier élément est en position `len(p) - 1`. Il est possible d'accèder aux éléments par leur indice entre crochets. 
 
 ``` py 
 >>> p = (1, 2, 'hello', True)
