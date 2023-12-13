@@ -270,7 +270,7 @@ Noter qu'on peut aussi bien écrire `return (c, a)` que  `return c, a` à la lig
 
 Appelons maintenant la fonction `cercle_info()` :
 
-``` py linenums="8"
+``` py linenums="10"
 rayon = float(input('Rayon du cercle ?'))
 print('La circonférence du cercle est', cercle_info(rayon)[0])
 print("L'aire du cercle est", cercle_info(rayon)[1])
