@@ -266,7 +266,7 @@ def cercle_info(r):
     a = pi * r**2
     return (c, a)    
 ```
-Noter qu'on peut aussi bien écrire `return (c, a)` que  `return c, a` à la ligne 9.
+La dernière ligne `return (c, a)` peut tout aussi bien s'écrire `return c, a`, la fonction renvoie le même p-uplet.
 
 Appelons maintenant la fonction `cercle_info()` :
 
@@ -279,7 +279,7 @@ print("L'aire du cercle est", cercle_info(rayon)[1])
 Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur du p-uplet renvoyé
 par l'appel de la fonction `cercle_info(rayon)`.
 
-On pouvait aussi disperser ces deux valeurs dans deux variables, pour rendre le code plus lisible : 
+Le p-uplet renvoyé par la fonction peut aussi être dispersé dans deux variables, ce qui permet de rendre le code plus lisible : 
 
 ``` py linenums="10"
 rayon = float(input('Rayon du cercle ?'))
