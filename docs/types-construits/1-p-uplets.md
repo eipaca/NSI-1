@@ -57,21 +57,21 @@ D'autres exemples de p-uplets :
 - 
     p-uplet avec un seul élément, l'entier `1`, écrit avec une virgule à la fin :
     ``` py
-    >>> p_simple = 1,
-    >>> p_simple
+    >>> p_1_elem = 1,
+    >>> p_1_elem
     (1,)
     ``` 
     ou  écrit avec des parenthèses : 
     ``` py
-    >>> p_simple = (1,)
-    >>> p_simple
+    >>> autre_p_1_elem = (1,)
+    >>> autre_p_1_elem
     (1,)
     ``` 
 -   
-    mais attention, c'est finalement la virgule plus que les parenthèses qui crée le p-uplet, ici `p_simple` n'est pas un p-uplet, c'est un entier ! 
+    mais attention, c'est finalement la virgule plus que les parenthèses qui crée le p-uplet, ici `pas_p` n'est pas un p-uplet, c'est un entier ! 
     ``` py
-    >>> p_simple = (1)
-    >>> p_simple
+    >>> pas_p = (1)
+    >>> pas_p
     1
     ```
     
@@ -145,13 +145,14 @@ Lorsqu'aucun indice n'est indiqué à gauche ou à droite du symbole deux-points
 
 Il est aussi possible de « deballer » ou disperser un p-uplet en affectant tous ses éléments dans plusieurs variables :
 
-```
+``` py
 >>> a, b, c = (1, 2, 3)
 >>> a
 1
 ```
 
-Ce qui pouvait aussi s'écrire sans parenthèse  : 
+Ce qui pouvait aussi s'écrire sans parenthèse : 
+
 ``` py 
 >>> a, b, c = 1, 2, 3 
 ```
@@ -171,6 +172,7 @@ Le mot clé `in` permet aussi d'écrire une boucle pour parcourir (ou «itérer 
 Comparons différentes façons pour parcourir un p-uplet `p` :
 
 === "Avec une boucle non bornée `while`"
+    
     Il faut gérer l'indice de boucle `i` pour qu'il parcourt toutes les positions des valeurs de `p`, c'est-à-dire l'intialiser à `0` puis l'incrémenter à chaque passage dans la boucle (`i = i + 1`) jusqu'à ce qu'il dépasse `len(p) - 1`.  `p[i]` permet d'accéder à la valeur du p-uplet qui se trouve à la position `i`.
 
     ``` py
@@ -217,7 +219,7 @@ Comparons différentes façons pour parcourir un p-uplet `p` :
 
 La boucle `for elem in p` est plus simple pour parcourir les valeurs d'un p-uplet, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce p-uplet, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les boucles sur indices de position `while i < len(p):` ou `for i in range(len(p)):`.
 
-:warning: Il est possible d'accéder aux éléments d'un p-uplet mais **pas de les modifier**.
+:warning: Un p-uplet est **immuables**, il est possible d'accéder à ses éléments, mais **pas de les modifier**.
 
 ``` py
 >>> t[1] = 3
@@ -233,7 +235,7 @@ Deux opérations sont possibles, l'addition et la multiplication :
 
 - L'opérateur d'addition « `+` » **concatène** (assemble) deux p-uplets.
 
-- L'opérateur de multiplication « ` * `» entre un nombre entier et une p-uplet **duplique** (répète) plusieurs fois les éléments dans un nouveau p-uplet. 
+- L'opérateur de multiplication « ` * `» entre un nombre entier et un p-uplet **duplique** (répète) plusieurs fois les éléments dans un nouveau p-uplet. 
 
 
 ``` py
@@ -246,16 +248,32 @@ Deux opérations sont possibles, l'addition et la multiplication :
 ##	Fonctions renvoyant un p-uplet
 
 Les p-uplets sont très utiles pour écrire des fonctions renvoyant plusieurs valeurs en même temps :
-``` py linenums="1"
-def circleInfo(r):
-    """ Return (circumference, area) of a circle of radius r """
-    c = 2 * 3.14159 * r
-    a = 3.14159 * r * r
-    return (c, a)
 
-def main():
-    perimeter, area = circleInfo(10)
+``` py linenums="1"
+def cercle_info(r):
+    """ (float) -> (float float)
+    Renvoie le p-uplet (circonference, aire) d'un cercle de rayon r
+    """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r**2
+    return (c, a)    
 ```
+Noter qu'on peut aussi bien écrire `return (c, a)` que  `return c, a` à la ligne 7.
+
+Appelons maintenant la fonction `cercle_info()` :
+
+``` py linenums="8"
+rayon = float(input('Rayon du cercle ?'))
+print('La circonférence du cercle est', cercle_info(rayon)[0])
+print("L'aire du cercle est", cercle_info(rayon)[1])
+
+perimetre, aire = cercle_info(rayon)         # on peut aussi déballer le tuple renvoyé par la fonction 
+```
+
+Noter la syntaxe `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` pour utiliser la première et la seconde valeur renvoyées
+par l'appel de la fonction `cercle_info(rayon)`.
+
+
 
 ## Conversion de type (cast)
 
