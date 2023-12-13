@@ -31,8 +31,8 @@ Il est aussi possible de créer un p-uplet sans parenthèse :
 :warning: Ne pas confondre la virgule qui sépare les différents éléments avec le point utilisé pour les nombres de type `float`, c'est souvent un risque d'erreur :
 
 ``` py
->>> p_1_elem = (1.2,3) # Creation d'un tuple avec 2 éléments : 1.2 (type float) et 3 (type int)
->>> p_2_elem = (1,2,3) # Creation d'un tuple avec trois éléments : 1 2 et 3 (type int)
+>>> p_2_elem = (1.2,3) # Creation d'un tuple avec 2 éléments : 1.2 (type float) et 3 (type int)
+>>> p_3_elem = (1,2,3) # Creation d'un tuple avec trois éléments : 1 2 et 3 (type int)
 ```
 
 Un p-uplet peut contenir des éléments de types différents, y compris d'autres p-uplets :
