@@ -278,7 +278,7 @@ print("L'aire du cercle est", cercle_info(rayon)[1])
 perimetre, aire = cercle_info(rayon)         # on peut aussi déballer le tuple renvoyé par la fonction 
 ```
 
-Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur renvoyées
+Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur du p-uplet renvoyé
 par l'appel de la fonction `cercle_info(rayon)`.
 
 
