@@ -264,9 +264,9 @@ def cercle_info(r):
     """
     c = 2 * pi * r
     a = pi * r**2
-    return (c, a)    
+    return c, a
 ```
-La dernière ligne `return (c, a)` peut tout aussi bien s'écrire `return c, a`, la fonction renvoie le même p-uplet.
+La dernière ligne `return c, a` peut tout aussi bien s'écrire `return (c, a)`, dans les deux cas la fonction renvoie exactement le même p-uplet.
 
 Appelons maintenant la fonction `cercle_info()` :
 
