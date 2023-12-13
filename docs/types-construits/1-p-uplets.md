@@ -5,7 +5,7 @@
 
     En Python les p-uplets sont du type `tuple`.
 
-Deux élements ensembles sont appelés un couple, trois élements un triplet, quatre éléments un quadruplet, etc., et par extension $p$ élements ensembles sont appelés un p-uplet.
+Deux élements ensembles forment un couple, trois élements un triplet, quatre éléments un quadruplet, etc., et par extension *p* élements ensembles forment un p-uplet.
 
 
 [^1.1]: ou *immutable* en anglais.
