@@ -38,12 +38,12 @@ Il est aussi possible de créer un p-uplet sans parenthèse :
 Un p-uplet peut contenir des éléments de types différents, y compris d'autres p-uplets :
 
 !!! note inline end "" 
-    Le second p-uplet `(3, 4, 'bye', False)` doit obligatoirement être écrit entre parenthèse dans ce cas.
+    Le second p-uplet `(3, 4.0, 'bye', False)` doit obligatoirement être écrit entre parenthèse dans ce cas.
 
 ``` py
->>> p_de_p = p, (3, 4, 'bye', False)
+>>> p_de_p = p, (3, 4.0, 'bye', False)
 >>> p_de_p
-((1, 2.5, 'hello', True), (3, 4, 'bye', False))
+((1, 2.5, 'hello', True), (3, 4.0, 'bye', False))
 ```
 
 
@@ -55,7 +55,7 @@ D'autres exemples de p-uplets :
     >>> p_vide = ()  
     ```
 - 
-    p-uplet avec un seul élément, l'entier `1`, écrit avec une virgule à la fin :
+    p-uplet avec un seul élément écrit avec une virgule à la fin :
     ``` py
     >>> p_1_elem = 1,
     >>> p_1_elem
@@ -73,6 +73,8 @@ D'autres exemples de p-uplets :
     >>> pas_p = (1)
     >>> pas_p
     1
+    >>> type(pas_p)
+    <class 'int'>
     ```
     
 
