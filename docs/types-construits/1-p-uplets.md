@@ -270,7 +270,21 @@ def cercle_info(r):
 ```
 La dernière ligne `return c, a` peut tout aussi bien s'écrire `return (c, a)`, dans les deux cas la fonction renvoie exactement le même p-uplet.
 
-Appelons maintenant la fonction `cercle_info()` :
+Appelons maintenant la fonction `cercle_info()`, par exemple pour avoir la circonférence et l'aire d'un cercle de rayon 10 :
+``` py
+>>> cercle_info(10)
+(62.83185307179586, 314.1592653589793)
+```
+La fonction renvoie un p-uplet de deux valeurs, la circonférence et l'aire du cercle, pour n'avoir que l'un des deux il faut accéder au premier et au deuxième élément du p-uplet :
+
+``` py
+>>> cercle_info(10)[0]            # circonference d'un cercle de rayon 10
+62.83185307179586
+>>> cercle_info(10)[1]            # aire d'un cercle de rayon 10
+314.1592653589793
+```
+
+Complétons le programme précédent pour demander à l'utilisateur de saisir le rayon du cercle :
 
 ``` py linenums="10"
 rayon = float(input('Rayon du cercle ?'))
@@ -279,9 +293,7 @@ print("L'aire du cercle est", cercle_info(rayon)[1])
 ```
 
 Ici `cercle_info(rayon)[0])` et `cercle_info(rayon)[1])` permettent de récupérer la première et la seconde valeur du p-uplet renvoyé
-par l'appel de la fonction `cercle_info(rayon)`.
-
-Le p-uplet renvoyé par la fonction peut aussi être dispersé dans deux variables, ce qui permet de rendre le code plus lisible : 
+par l'appel de la fonction `cercle_info(rayon)`.  Ce p-uplet peut aussi être dispersé dans deux variables, ce qui rend le code plus lisible : 
 
 ``` py linenums="10"
 rayon = float(input('Rayon du cercle ?'))
