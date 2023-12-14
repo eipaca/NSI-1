@@ -103,7 +103,7 @@ Il est possible d'accèder aux éléments par leur indice entre crochets.
 
 :warning: Le premier élément est à l'indice 0.
 
-Les positions des élements d'un p-uplet peuvent également être indexé avec des nombres négatifs selon le modèle suivant :
+Les positions des élements d'un p-uplet peuvent également être indexées avec des nombres négatifs selon le modèle suivant :
 
 |`>>> p = `    | `(` | `1,` | `2.5,` | `'hello,'` | `True` | `)`|
 |---           |-:   |:-:   |:-:   |:-:         |:-:     |:- |
