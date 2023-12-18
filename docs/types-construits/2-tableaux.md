@@ -252,20 +252,19 @@ Il existe plusieurs méthodes pour supprimer des éléments à un tableau `t`:
 - `t.pop(i)` supprime l'élément situé à la position `i` et le renvoie en valeur de retour. Si aucune position n'est spécifiée, `t.pop()` supprime et renvoie le dernier élément du tableau :
 
     ``` py
-    >>> t = [1,2,3]
+    >>> t = ['a', 'b', 'c', 'd', 'e']
     >>> t.pop()
-    3
+    'e'
     >>> t
-    [1, 2]
+    ['a', 'b', 'c', 'd']
     ```
 
 - L'instruction `del`[^2.5]  permet aussi de supprimer un élément du tableau :
     ```py 
-    >>> t
-    [1, 2, 3, 4, 5]
+    >>> t = [1, 2, 3, 4, 5]
     >>> del t[3]
     >>> t
-    [1, 2, 3]	
+    [1, 2, 3, 5]	
     ```
     Ou encore le tableau entier avec l'instruction `del t`, alors la variable `t` n'existe plus.
 
