@@ -247,6 +247,7 @@ Il existe plusieurs méthodes pour supprimer des éléments à un tableau `t`:
     >>> t.remove(13)
     >>> t
     [12, 14, 15]
+    ```
 
 - `t.pop(i)` supprime l'élément situé à la position `i` et le renvoie en valeur de retour. Si aucune position n'est spécifiée, `t.pop()` supprime et renvoie le dernier élément du tableau :
 
