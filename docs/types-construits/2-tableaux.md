@@ -1,4 +1,4 @@
-# Tableaux (type `list`)
+﻿# Tableaux (type `list`)
 
 !!! abstract "Cours" 
     Un **tableau** est une suite **ordonnée** d'éléments qui peuvent être **modifiés** (muables[^2.1]).
@@ -36,7 +36,7 @@ tableauvide = []      # Creation d'un tableau vide
 ou un tableau contenant un seul élément :
 
 ``` py
-singleton = [5] # Creation d'un tableau avec un seul element
+t_1_elem = [5] # Creation d'un tableau avec un seul element
 ```
 
 ## Fonction `len()`
@@ -81,26 +81,25 @@ L'accès à une partie d'un tableau (une « tranche ») se fait sur le modèle `
 
 ``` py
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
->>> t[0:2]
+>>> t[1:3]
+['b', 'c']
+>>> t[1:-2]
+['b', 'c', 'd']
 ```
 
 Lorsqu'aucun indice n'est indiqué à gauche ou à droite du symbole deux-points, Python prend par défaut tous les éléments depuis le début ou tous les éléments jusqu'à la fin respectivement.
 
 ``` py
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
->>> t[0:]
-['a', 'b', 'c', 'd', 'e', 'f']
->>> t[:]
-['a', 'b', 'c', 'd', 'e', 'f']
 >>> t[1:]
 ['b', 'c', 'd', 'e', 'f']
 >>> t[:2]
 ['a', 'b']
->>> t[1:-2]
-['b', 'c', 'd']
+>>> t[:]
+['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
-Il est aussi possible de « deballer » ou disperser un tableau en affectant tous ses éléments dans plusieurs variables :
+Il est aussi possible de disperser, ou « déballer », un tableau en affectant tous ses éléments dans plusieurs variables :
 
 ``` py
 >>> a, b, c, d = [1, 2, 3, 4]
@@ -301,7 +300,7 @@ Pour trouver un élément dans un tableau :
 
 - `t.index(x)` renvoie la position du premier élément du tableau dont la valeur égale `x`.
     ``` py
-    >>> t = [5 ,0 ,3 ,2 ,8 ,6]
+    >>> t = [5, 0, 3, 2, 8, 6]
     >>> t.index(2)
     3
     >>> ['a', 'c', 'd', 'e'].index('c')
@@ -310,7 +309,7 @@ Pour trouver un élément dans un tableau :
 
 - `t.count(x)`	renvoie le nombre d'éléments ayant la valeur `x` dans le tableau.
     ``` py
-    >>> [1, 1 , 2, 2, 2 ,3 , 4, 4 ,3].count(3)
+    >>> [1, 1, 2, 2, 2, 3, 4, 4, 3].count(3)
     2
     ```
 
