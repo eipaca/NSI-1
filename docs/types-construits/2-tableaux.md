@@ -30,7 +30,7 @@ Un tableau est déclaré par une série de valeurs séparées par des virgules, 
 Il est possible decréer un tableau vide :
 
 ``` py
-tableauvide = []      # Creation d'un tableau vide
+t_vide = []      # Creation d'un tableau vide
 ```
 
 ou un tableau contenant un seul élément :
@@ -205,49 +205,51 @@ Deux opérations sont possibles, l'addition et la multiplication :
 Il existe plusieurs méthodes pour ajouter des éléments à un tableau `t`:
 
 - `t.append(x)` ajoute un élément `x` à la fin d'un tableau `t`.
-    ``` py
-	>>> t = [1, 2, 3]
-    >>> t.append(4)
-    >>> t
-    [1, 2, 3, 4]
-    ```
+  ``` py
+  >>> t = [1, 2, 3]
+  >>> t.append(4)
+  >>> t
+  [1, 2, 3, 4]
+  ```
 
 - `t.insert(i, x)` insére un élément `x` à la position donnée par l'indice `i`. `i` est la position de l'élément courant avant lequel l'insertion doit s'effectuer.  	
-    ``` py
-    >>> t = ['a', 'b', 'd']
-    >>> t.insert(2, 'c')
-    >>> t
-    ['a', 'b', 'c', 'd']
-    ```
+   ``` py
+   >>> t = ['a', 'b', 'd']
+   >>> t.insert(2, 'c')
+   >>> t
+   ['a', 'b', 'c', 'd']
+   ```
 
 - `t.extend(autretableau)` étend un tableau `t` en lui ajoutant tous les éléments de `autretableau`.
-    ``` py
-	>>> t = [1, 2, 3]
-    >>> t.extend([4, 5, 6])
-    >>> t
-    [1, 2, 3, 4, 5, 6]
-    ```
+   ``` py
+   >>> t = [1, 2, 3]
+   >>> t.extend([4, 5, 6])
+   >>> t
+   [1, 2, 3, 4, 5, 6]
+   ```
 
-    :warning: Ne pas confondre `append` (ajouter un élément) et `extend` (étendre un tableau). Si on utilise `append` avec un tableau on obtient un tableau de tableaux !
-        ``` py
-        >>> t.append([4, 5, 6])
-        >>> t
-        [1, 2, 3, [4, 5, 6]]
-        ```
+   :warning: Ne pas confondre `append` (ajouter un élément) et `extend` (étendre un tableau). Si on utilise `append` avec un tableau on obtient un tableau de tableaux !
+   ``` py
+   >>> t.append([4, 5, 6])
+   >>> t
+   [1, 2, 3, [4, 5, 6]]
+   ```
 
 
 ###	Supprimer des éléments
 
 Il existe plusieurs méthodes pour supprimer des éléments à un tableau `t`:
 
--`t.remove(x)` supprime le premier élément dont la valeur est égale à `x`. Si le tableau  contient plusieurs fois la valeur `x`, seule la première occurrence trouvée est supprimée :
+- `t.remove(x)` supprime le premier élément dont la valeur est égale à `x`. Si le tableau  contient plusieurs fois la valeur `x`, seule la première occurrence trouvée est supprimée :
+
     ``` py
-    	>>> t = [12, 13, 14, 15]
-        >>> t.remove(13)
-        >>> t
-        [12, 14, 15]
+    >>> t = [12, 13, 14, 15]
+    >>> t.remove(13)
+    >>> t
+    [12, 14, 15]
 
 - `t.pop(i)` supprime l'élément situé à la position `i` et le renvoie en valeur de retour. Si aucune position n'est spécifiée, `t.pop()` supprime et renvoie le dernier élément du tableau :
+
     ``` py
     >>> t = [1,2,3]
     >>> t.pop()
@@ -255,7 +257,6 @@ Il existe plusieurs méthodes pour supprimer des éléments à un tableau `t`:
     >>> t
     [1, 2]
     ```
-
 
 - L'instruction `del`[^2.5]  permet aussi de supprimer un élément du tableau :
     ```py 
