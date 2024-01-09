@@ -334,7 +334,7 @@ Comme la fonction `tuple()`, la fonction `list()` prend en argument un objet sé
 
 On peut créer un tableau vide avec la fonction list() sans argument.
 ``` py
-tableauvide = list()  
+t_vide = list()  
 ```
 
 Nous avons déjà vu l'utilisation de la fonction `range()` . Lorsqu'elle est utilisée en combinaison avec la fonction list(), on obtient une tableau d'entiers. Par exemple :
@@ -514,12 +514,12 @@ Dans le cas d'un tableau de tableaux avec des sous-tableaux de même taille, on 
 
 
 
-On dit que cette matrice a 2 dimensions et est de taille 3 x 5. Les éléments sont donc identifiés par zoo[no de ligne][no de colonne]
+On dit que cette matrice a 2 dimensions et est de taille 3 x 3. Les éléments sont donc identifiés par `t[no de ligne][no de colonne]`.
 
 
 
 !!! question "Exercice corrigé" 
-	Ecrire une fonction `lucas(a, b, c)` prenant en paramètres 3 entiers relatifs `a`, `b` et `c` , vérifie par asserts que  $0 < a < b < c – a` et `b ≠ 2a` puis ernvoie le carré magique 3x3 en utilisant la méthode d'Edouard Lucas sous forme d'un tableau de tableaux :
+	Ecrire une fonction `lucas(a, b, c)` prenant en paramètres 3 entiers relatifs `a`, `b` et `c` , vérifie par asserts que  `0 < a < b < c – a` et `b ≠ 2a` puis ernvoie le carré magique 3x3 en utilisant la méthode d'Edouard Lucas sous forme d'un tableau de tableaux :
 
 
     ||||
@@ -529,7 +529,7 @@ On dit que cette matrice a 2 dimensions et est de taille 3 x 5. Les éléments s
     |c – b|c + a + b|c – a|
 
     
-    «  En mathématiques, un carré magique d'ordre n est composé de n² entiers strictement positifs, écrits sous la forme d'un tableau carré. Ces nombres sont disposés de sorte que leurs sommes sur chaque rangée, sur chaque colonne et sur chaque diagonale principale soient égales. » source : [https://fr.wikipedia.org/wiki/Carré_magique_(mathématiques)](https://fr.wikipedia.org/wiki/Carr%C3%A9_magique_(math%C3%A9matiques)) 
+    «  En mathématiques, un carré magique d'ordre n est composé de $n^2$ entiers strictement positifs, écrits sous la forme d'un tableau carré. Ces nombres sont disposés de sorte que leurs sommes sur chaque rangée, sur chaque colonne et sur chaque diagonale principale soient égales. » source : [https://fr.wikipedia.org/wiki/Carré_magique_(mathématiques)](https://fr.wikipedia.org/wiki/Carr%C3%A9_magique_(math%C3%A9matiques)) 
 
 
 
