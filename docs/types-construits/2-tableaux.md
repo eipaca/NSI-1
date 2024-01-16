@@ -549,7 +549,7 @@ On dit que cette matrice a 2 dimensions et est de taille 3 x 3. Les éléments s
 
 !!! question "Exercice corrigé" 
 	Ecrire une fonction qui vérifie qu'un carré est magique (ou pas).
-    «  En mathématiques, un carré magique d'ordre n est composé de n2 entiers strictement positifs, écrits sous la forme d'un tableau carré. Ces nombres sont disposés de sorte que leurs sommes sur chaque rangée, sur chaque colonne et sur chaque diagonale principale soient égales. » source : [https://fr.wikipedia.org/wiki/Carré_magique_(mathématiques)](https://fr.wikipedia.org/wiki/Carr%C3%A9_magique_(math%C3%A9matiques)) 
+    «  En mathématiques, un carré magique d'ordre $n$ est composé de $n^2$ entiers strictement positifs, écrits sous la forme d'un tableau carré. Ces nombres sont disposés de sorte que leurs sommes sur chaque rangée, sur chaque colonne et sur chaque diagonale principale soient égales. » source : [https://fr.wikipedia.org/wiki/Carré_magique_(mathématiques)](https://fr.wikipedia.org/wiki/Carr%C3%A9_magique_(math%C3%A9matiques)) 
 
 ??? Success "Réponse"
     ``` py linenums="1"
