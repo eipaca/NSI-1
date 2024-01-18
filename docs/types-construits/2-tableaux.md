@@ -27,7 +27,7 @@ Un tableau est déclaré par une série de valeurs séparées par des virgules, 
 :warning: Comme pour les p-uplets, ne pas confondre la virgule de séparateur d'éléments avec le point de séparateur décimal.
 
 
-Il est possible decréer un tableau vide :
+Il est possible de créer un tableau vide :
 
 ``` py
 t_vide = []      # Creation d'un tableau vide
