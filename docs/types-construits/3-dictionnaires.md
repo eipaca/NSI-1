@@ -33,7 +33,7 @@ ou avec la fonction `dict()` :
 >>> capitales = dict()
 ```
 
-puis de remplire le dictionnaire avec différentes clés (`'France'`, `'Italie'` et `'Espagne'`) et leur valeurs (`'Paris'`, `'Rome'` et `'Madrid'`) :
+puis de remplir le dictionnaire avec différentes clés (`'France'`, `'Italie'` et `'Espagne'`) et leur valeurs (`'Paris'`, `'Rome'` et `'Madrid'`) :
 
 ``` py
 >>> capitales["France"] = "Paris"
@@ -117,7 +117,7 @@ KeyError: 'allemagne'
 ```
 
 
-Le mot clé `in` permet de vérifier si une clé `key` est présente dans un dictionaire `d`,  `key in d` renvoie un booléen :
+Le mot clé `in` permet de vérifier si une clé  est présente dans un dictionnaire, il renvoie un booléen :
 
 
 ``` py
@@ -185,7 +185,7 @@ capitales["Italie"] = "Roma"
 {'Espagne': 'Madrid', 'France': 'Paris', 'Italie': 'Roma'}
 ```
 
-Alor que dans un tableau on ne peut pas modifier la valeur d'un indice qui n'existe pas :
+Dans un tableau, on ne peut pas modifier la valeur d'un indice qui n'existe pas :
 
 ``` py
 >>> pays = ['Madrid', 'Paris', 'Roma']
@@ -195,7 +195,7 @@ Traceback (most recent call last):
 IndexError: list assignment index out of range
 ```
 
-on peut modifier la valeur d'une clé qui n'existe pas dans un dictionnaire. Cela revient à ajouter un nouveau couple clé-valeur :
+Mais dans un dictionnaire, si on essaie de modifier la valeur d'une clé qui n'existe pas, alors un nouveau couple clé-valeur est créé :
 
 ``` py
 >>> capitales["Allemagne"] = 'Berlin'
@@ -207,17 +207,17 @@ on peut modifier la valeur d'une clé qui n'existe pas dans un dictionnaire. Cel
 
 ###	Supprimer des éléments
 
-Comme pour les tableaux, il est possible d'utiliser les methodes `pop()` et `clear()` (mais pas `remove()`)
+Comme pour les tableaux, il est possible d'utiliser les methodes `pop()` et `clear()` (mais pas `remove()`) pour supprimer des couples de clé-valeur :
 
 
-- `d.pop(key)`[^3.3] supprime du dictionnaire la clé `key`  et renvoie la valeur associée :	
+- `d.pop(key)`[^3.3] supprime du dictionnaire la clé `key` et renvoie la valeur associée :	
     ``` py
     >>> d = {'one':1, 'two':2, 'three' :3}
     >>> d.pop('two')
     2
     ```
 
-[^3.3]: La clé dans `d.pop(key)` est obligatoire, alors que pour les tableaux elle est facultative (par défaut le dernier élément est  supprimé)
+[^3.3]: La clé dans `d.pop(key)` est obligatoire, alors que pour les tableaux elle est facultative (par défaut le dernier élément est supprimé)
 
 - `d.clear()` supprime tous les éléments du dictionnaire :
     ``` py
@@ -225,7 +225,8 @@ Comme pour les tableaux, il est possible d'utiliser les methodes `pop()` et `cle
     >>> d.clear()
     ```
 
-Comme pour les tableaux, le mot clé `del` permet de supprimer un élément d'un dictionnaire :
+Comme pour les tableaux, le mot clé `del` permet aussi de supprimer un élément d'un dictionnaire :
+
 ``` py
 >>> del capitalse['Allemagne']
 >>> capitales
