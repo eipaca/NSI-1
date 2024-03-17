@@ -362,54 +362,79 @@ Réciproquement la méthode `.join()` permet de convertir un tableau en chaîne 
 
 ##	Création par compréhension
 
-Il est possible de créer un tableau par compréhension en utilisant :
-```py 
-nouveau_tableau = [expression(i) for i in ancien_tableau if condition]
-```
+Il est possible de créer un tableau par compréhension en utilisant l'une de ces syntaxes :
 
-Exemple :
-``` py
->>> carres = []
->>> for x in range(10):
-...     carres.append(x**2)
->>> carres
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81
-```
-Ce qui est equivalent à :
-``` py
->>> carres = [x**2 for x in range(10)]
->>> carres
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-``` 
+-   avec une expression sur les valeurs dans un `ancien_tableau` ou d'une fonction `range` : 
+    ```py 
+    nouveau_tableau = [expression(i) for i in ancien_tableau]
+    nouveau_tableau = [expression(i) for i in range(...)]
+    ```
 
-A partir d'un autre tableau `ancien_tableau` :
-``` py
->>> mult_3 = [3 * i for i in [1, 2, 3]]
->>> mult_3
-[3, 6, 9]
-```
+    Exemple :
+    ``` py
+    >>> carres = []
+    >>> for x in range(10):
+    ...     carres.append(x**2)
+    >>> carres
+    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81
+    ```
+    est equivalent à :
+    ``` py
+    >>> carres = [x**2 for x in range(10)]
+    >>> carres
+    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+    ```
+    ou avec un autre tableau : 
+    ``` py
+    >>> mult_3 = [3 * i for i in [1, 2, 3]]
+    >>> mult_3
+    [3, 6, 9]
+    >>> mult_ = [3 * i for i in [1, 2, 3]]
+    >>> mult_3
+    [3, 6, 9]
+    ```
 
-Et avec une condition :
-``` py
->>> nombres = [2, 5, 11, 17]
->>> carre_mult_3 = [x**2 for x in nombres if x != 11]
-```
+-   avec une fonction : ``` nouveau_tableau = [f(x) for x in ... ] ```
 
-Ou même avec une fonction :
-```
->>> def f(x):
-...     return 2*x + 3
->>> absisses = [1, 2, 3, 5, 10]
->>> ordonnees = [f(x) for x in absisses]
->>> ordonnees
-[5, 7, 9, 13, 23]
-```
+    Exemple : 
+    
+    ``` python
+    >>> def f(x):
+    ...     return 2*x + 3
+    >>> absisses = [1, 2, 3, 5, 10]
+    >>> ordonnees = [f(x) for x in absisses]
+    >>> ordonnees
+    [5, 7, 9, 13, 23]
+    ```
 
-Avec plusieurs arguments :
-``` py
->>> [x + y for x in [10, 30, 50] for y in [20, 40, 60]]
-[30, 50, 70, 50, 70, 90, 70, 90, 110]
-```
+
+-   avec une condition `if` : ``` nouveau_tableau = [expression(i) for i in ... if condition] ```
+
+    Exemple : 
+    ``` py
+    >>> carre_mult_3 = [x**2 for x in range(10) if x%3 == 0]
+    >>> carre_mult_3
+    [0, 9, 36, 81]
+    ```
+    
+-   avec une condition `if...else` : ``` nouveau_tableau = [expression(i) if condition else autre_expression(i) for i in ...] ```
+    (attention l'ordre est différent)
+
+    Exemple :
+    
+    ``` py
+    >>> carre_mult_3_or_0 = [x**2 if x%3 == 0 else 0 for x in range(10)] 
+    >>> carre_mult_3_or_0
+    [0, 0, 0, 9, 0, 0, 36, 0, 0, 81]
+    ```
+
+-   avec plusieurs paramètres  : ``` nouveau_tableau = [expression(i, j) for i in ... for j in ... if condition] ```
+
+    Exemples: 
+    ``` py
+    >>> [x + y for x in [10, 30, 50] for y in [20, 40, 60]]
+    [30, 50, 70, 50, 70, 90, 70, 90, 110]
+    ```
  
 ##	Tableaux de tableaux 
 
