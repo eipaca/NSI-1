@@ -141,21 +141,21 @@ nav:
   - Langages et programmation(1): 
     - langages-et-programmation/index.md
     - Variables et affectation: langages-et-programmation/1-variables-affectation.md
-    - Opérations, comparaisons et expressions: langages-et-programmation/2-operations-comparaisons-expressions.md
-    - Instructions: langages-et-programmation/3-instructions.md
-    - Constructions élémentaires: langages-et-programmation/4-constructions-elementaires.md
-    - Appel de fonctions: langages-et-programmation/5-fonctions.md
-    - Modules et bibliothèques: langages-et-programmation/6-modules-bibliotheques.md
-    - Mise au point des programmes et gestion des bugs: langages-et-programmation/7-mise-au-point-gestion-bugs.md
+    #- Opérations, comparaisons et expressions: langages-et-programmation/2-operations-comparaisons-expressions.md
+    #- Instructions: langages-et-programmation/3-instructions.md
+    #- Constructions élémentaires: langages-et-programmation/4-constructions-elementaires.md
+    #- Appel de fonctions: langages-et-programmation/5-fonctions.md
+    #- Modules et bibliothèques: langages-et-programmation/6-modules-bibliotheques.md
+    #- Mise au point des programmes et gestion des bugs: langages-et-programmation/7-mise-au-point-gestion-bugs.md
   #- Langages et programmation(2): 
   #  - langages-et-programmation-2/index.md
   #  - Types de langages: langages-et-programmation-2/1-types-de-langages.md
   #  - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
 
-  - Types construits: 
-    - types-construits/index.md
-    - p-uplets: types-construits/1-p-uplets.md
-    - Tableaux: types-construits/2-tableaux.md
-    - Dictionnaires: types-construits/3-dictionnaires.md
-    - Comparaisons: types-construits/4-comparaisons.md
-    - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
+  #- Types construits: 
+    #- types-construits/index.md
+    #- p-uplets: types-construits/1-p-uplets.md
+    #- Tableaux: types-construits/2-tableaux.md
+    #- Dictionnaires: types-construits/3-dictionnaires.md
+    #- Comparaisons: types-construits/4-comparaisons.md
+    #- Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
