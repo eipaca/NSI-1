@@ -141,7 +141,7 @@ nav:
   - Langages et programmation(1): 
     - langages-et-programmation/index.md
     - Variables et affectation: langages-et-programmation/1-variables-affectation.md
-    #- Opérations, comparaisons et expressions: langages-et-programmation/2-operations-comparaisons-expressions.md
+    - Opérations, comparaisons et expressions: langages-et-programmation/2-operations-comparaisons-expressions.md
     #- Instructions: langages-et-programmation/3-instructions.md
     #- Constructions élémentaires: langages-et-programmation/4-constructions-elementaires.md
     #- Appel de fonctions: langages-et-programmation/5-fonctions.md
