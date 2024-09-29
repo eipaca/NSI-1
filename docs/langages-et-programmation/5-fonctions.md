@@ -30,9 +30,13 @@ Nous avons déjà utilisé des fonctions comme `print()` ou `len()` qui sont des
 Comme pour les noms de variables, le nom d'une fonction :
 
 - s'écrit en lettres minuscules (« `a` » à « `z` ») et majuscules (« `A` » à « `Z` ») et peut contenir des chiffres (« `0` » à « `9` ») et le caractère blanc souligné (« `_` ») ;
+
 - ne doit pas comporter d'espace, de signes d'opération « `+` », « `-` », « `*` » ou « `/` », ni de caractères spéciaux comme des signes de ponctuation « `'` », « `"` », « `,` », « `.` », « `:` », « `@` », etc.  ;
+
 - ne doit pas commencer par un chiffre ;
+
 - ne doit pas être un mot réservé de Python, par exemple « `for` », « `if` », « `print` », etc. ; et
+
 - est sensible à la casse, ce qui signifie que les fonctions « `TesT` », « `test` » ou « `TEST` » sont différentes.
 
 
