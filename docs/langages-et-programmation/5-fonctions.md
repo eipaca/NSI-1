@@ -200,7 +200,7 @@ TypeError: bonjour() missing 1 required positional argument: 'prenom2'
 En plus des paramètres positionnels qui sont obligatoires, il existe des paramètres qui sont facultatifs ayant une valeur d'argument par défaut s'il ne sont pas renseignés, c'est-à-dire la valeur que prendra un paramètre si la fonction est appelée sans argument correspondant. 
 
 !!! tip inline end "PEP 8"  
-    Pas d'espace autour du égal (`=`) dans le cas des arguments par mot-clé (à la différence de l'affectation où ils sont recommandés). 
+    Pas d'espace autour du égal (`=`) dans le cas des paramètres par mot-clé (à la différence de l'affectation où ils sont recommandés). 
 
 ``` py linenums="1"
 def bonjour(prenom1, prenom2='Lisa'):
