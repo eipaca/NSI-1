@@ -231,6 +231,7 @@ sur 7 wagons en les répartissant ainsi :
 On cherche la répartition des containers (**sélectionner**) qui permet d'utiliser le plus petit nombre de wagons **minimiser une grandeur**) sans dépasser la capacité des wagons de 60 tonnes (**contrainte**).
 
 On propose d’utiliser l’algorithme glouton suivant :
+
 -  train = tableau_vide
 -  Tant qu’il reste des containers à charger :
     - wagon = tableau vide
