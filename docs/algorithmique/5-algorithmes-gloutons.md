@@ -256,7 +256,7 @@ On propose d’utiliser l’algorithme glouton suivant :
         """
         train = []
         # tri des containers en ordre décroissant
-        containers = sorted(containers, reverse = True)
+        containers = sorted(containers, reverse=True)
         # tant qu'il reste des containers à charger
         while len(containers) != 0:
             # on crée un nouveau wagon
