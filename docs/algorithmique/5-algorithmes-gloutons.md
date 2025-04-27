@@ -246,7 +246,7 @@ On propose d’utiliser l’algorithme glouton suivant :
   
 
 ??? Success "Réponse"
-    1. Voyons d'abord la solution qui ne fonctionne pas :
+    
     ``` py
 
     def charger(containers, pmax):
@@ -266,7 +266,7 @@ On propose d’utiliser l’algorithme glouton suivant :
             while i >= 0:
                 # si on ne dépasse pas pmax en mettant le container sur le wagon
                 if sum(wagon) + containers[i] <= pmax:
-                    # on l'ajoute au wagon
+                    # on l'ajoute au wagon et on le supprime de containers
                     wagon.append(containers.pop(i))
                 i = i - 1
             # on ajoute le wagon au train
