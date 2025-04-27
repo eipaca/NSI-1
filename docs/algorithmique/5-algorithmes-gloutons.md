@@ -232,16 +232,16 @@ On cherche la répartition des containers (**sélectionner**) qui permet d'utili
 
 On propose d’utiliser l’algorithme glouton suivant :
 
--  train = tableau_vide
--  Tant qu’il reste des containers à charger :
+- train = tableau_vide
+- Trier les containers en ordre croissant (du plus leger au plus lourd).
+- Tant qu’il reste des containers à charger :
     - wagon = tableau vide
-    - Tant qu’il reste des containers à charger et qu’on ne dépasse pas 60 tonnes sur le wagon, choisir le container le moins lourd et essayer de le charger sur le wagon.
-    - Ajouter le wagon au train
+    - Parcourir les containers qui restent en partant de la fin (du plus lourd au plus leger) :
+        - Si on ne dépasse pas 60 tonnes sur le wagon : enlever le container de la liste des containers et l'ajouter sur le wagon.
+    - Ajouter le wagon au train.
 
 !!! question "Exercice corrigé" 
     1. Écrire une fonction `charger(containers, pmax)` qui prend en paramètre `containers`, le tableau des poids des containers en tonne et `pmax`, la capacité d’un wagon (un nombre entier) et renvoie la répartition des containers
-
-    2. Trouver un exemple pour lequel l’algorithme glouton n’est pas optimal.
 
   
 
@@ -255,25 +255,25 @@ On propose d’utiliser l’algorithme glouton suivant :
         wagons sans dépasser une capacité des wagons de pmax
         """
         train = []
-        # tri des containers en ordre décroissant
-        containers = sorted(containers, reverse=True)
+        # tri des containers en ordre croissant
+        containers = sorted(containers)
         # tant qu'il reste des containers à charger
         while len(containers) != 0:
             # on crée un nouveau wagon
             wagon = []
-            # tant qu'il reste des containers à charger
-            # et qu'on ne dépasse pas pmax en le mettant dans le wagon
-            while len(containers) != 0 and sum(wagon) + containers[-1] <= pmax:
-                # on l'ajoute au wagon
-                wagon.append(containers.pop())
+            # on parcourt containers en partant de la fin (du plus lourd au plus leger)
+            i = len(containers) - 1
+            while i >= 0:
+                # si on ne dépasse pas pmax en mettant le container sur le wagon
+                if sum(wagon) + containers[i] <= pmax:
+                    # on l'ajoute au wagon
+                    wagon.append(containers.pop(i))
+                i = i - 1
             # on ajoute le wagon au train
             train.append(wagon)
         return train
 
     >>> containers = [32, 1, 4, 11, 16, 38, 30, 15, 40, 20, 26, 5, 25, 14, 44, 17, 7, 6]
     >>> charger(containers, 60)
-    [[1, 4, 5, 6, 7, 11, 14], [15, 16, 17],  [20, 25],  [26, 30],  [32],  [38],  [40],  [44]]
+    [[44, 16], [40, 20], [38, 17, 5], [32, 26, 1], [30, 25, 4], [15, 14, 11, 7, 6]]
     ```
-
-    2. 
-    Avec les nombres `[15, 4, 20, 17, 11, 8, 11, 16, 7, 14, 2, 7, 5, 17, 19, 18, 4, 5, 13, 8]` on obtient 84 alors qu’on pouvait choisir 20 + 18 +17 + 16 + 15 = 86
