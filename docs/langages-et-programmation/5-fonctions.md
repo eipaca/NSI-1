@@ -66,7 +66,7 @@ Lorsqu'une fonction est définie dans un programme, elle ne s'exécute pas autom
 Définir une fonction consiste simplement à décrire son comportement et à lui donner un nom. Pour exécuter la fonction, il faut l'**appeler** depuis un programme ou depuis la console Python en écrivant son nom suivi des parenthèse. 
 
 !!! note inline end "" 
-    :warning: Quand la fonction n'a pas de paramètres, il faut quand même mettre les parenthèses pour l'appeller.
+    :warning: Quand la fonction n'a pas de paramètres, il faut quand même mettre les parenthèses pour l’appeler.
 
 === "Depuis la console"
     ``` py linenums="1"
@@ -188,7 +188,7 @@ hello Tom and Lea
 hello Tom and Lea
 ```
 
-Dans tous les cas, il faut appeler une fonction avec **suffisament d'arguments pour tous ses paramètres positionnels**, sinon la fonction ne peut pas s'éxécuter et affiche un message d'erreur :bug: :
+Dans tous les cas, il faut appeler une fonction avec **suffisamment d'arguments pour tous ses paramètres positionnels**, sinon la fonction ne peut pas s’exécuter et affiche un message d'erreur :bug: :
 
 ``` py 
 >>> bonjour('Tom')
@@ -206,7 +206,7 @@ En plus des paramètres positionnels qui sont obligatoires, il existe des param�
 def bonjour(prenom1, prenom2='Lisa'):
     print('hello', prenom1, 'and', prenom2)
 
---- Exemple d‘appel dans l‘interpreteur-----------------
+--- Exemple d‘appel dans l‘interpréteur-----------------
 >>> bonjour('Tom')
 hello Tom and Lisa
 ```
@@ -269,7 +269,7 @@ et comparons plusieurs appels de la fonction :
 
 === "Appel 5"
 
-    La fonction est appelée avec les deux arguments par mot-clé, mais il manque l'argument postionnel obligatoire, il y a une erreur : bug:
+    La fonction est appelée avec les deux arguments par mot-clé, mais il manque l'argument positionnel obligatoire, il y a une erreur : bug:
 
     ``` py
     >>> bonjour(prenom2="Jean", prenom3="Lea")
@@ -281,7 +281,7 @@ et comparons plusieurs appels de la fonction :
 
 === "Appel 6"
 
-    La fonction est appelée avec deux arguments, le premier corresponant au mot-clé du troisième paramètre et le second correspond au paramètre positionnel. Il y a une erreur car les paramètres positionnels doivent être placés avant.
+    La fonction est appelée avec deux arguments, le premier correspondant au mot-clé du troisième paramètre et le second correspond au paramètre positionnel. Il y a une erreur car les paramètres positionnels doivent être placés avant.
 
 
     ``` py
@@ -296,7 +296,7 @@ et comparons plusieurs appels de la fonction :
 
 === "Appel 7"
 
-    La fonction est appelée avec deux arguments, le premier corresponant au mot-clé du troisième paramètre et le second correspond au paramètre positionnel identifié par son mot-clé. Le deuxième paramètre utilise la valeur par défaut.
+    La fonction est appelée avec deux arguments, le premier correspondant au mot-clé du troisième paramètre et le second correspond au paramètre positionnel identifié par son mot-clé. Le deuxième paramètre utilise la valeur par défaut.
 
     ``` py
     >>> bonjour(prenom3="Lea", prenom1="Tom")
@@ -305,7 +305,7 @@ et comparons plusieurs appels de la fonction :
 
 
 À noter : 
-> Si une fonction est définie avec des paramètres positionnels et des paramètres par mot-clé, les paramètres positionnels doivent toujours être placés avant les paramètres par mot-clé : Ecrire «`def bonjour (prenom1='Tim', prenom2):`» :bug: est incorrect.
+> Si une fonction est définie avec des paramètres positionnels et des paramètres par mot-clé, les paramètres positionnels doivent toujours être placés avant les paramètres par mot-clé : Écrire «`def bonjour (prenom1='Tim', prenom2):`» :bug: est incorrect.
 
 
 
@@ -342,7 +342,7 @@ Impossible de faire la somme des prix des deux articles ! Cette fonction montre 
 Plutôt que d'afficher le prix calculé, il est plus judicieux de le **renvoyer**.
 
 !!! note inline end "" 
-    Il n'y a pas de parenthèse à l'instuction `return`.
+    Il n'y a pas de parenthèse à l'instruction `return`.
 
 ``` py
 def prix(prix_ht, tva=20):
@@ -404,7 +404,7 @@ Alors quelle est la différence ? Elle apparaît immédiatement si on appelle la
     ```
     Le programme n'affiche rien.
 
-Et si on essaye d'appeller la fonction depuis le programme avec `print(prix(100, 5))`:
+Et si on essaye d'appeler la fonction depuis le programme avec `print(prix(100, 5))`:
 
 === "Fonction avec `print()`"
     ``` py 
@@ -456,7 +456,7 @@ Appelons `prix(100, 5)` et essayons d'affecter la valeur renvoyée par ces deux 
 	Dans ce cas la variable `p` a bien la valeur `105` comme attendu.
 	
 	
-Dans le doute, de façon générale, il faut éviter d'afficher un résultat avec `print()` dans une fonction autre que la fonction `main()` et préfèrer renvoyer le résultat avec `return`.
+Dans le doute, de façon générale, il faut éviter d'afficher un résultat avec `print()` dans une fonction autre que la fonction `main()` et préférer renvoyer le résultat avec `return`.
 
 Un autre point important à noter est qu'une fonction se termine immédiatement dès qu'une instruction `return` est exécutée. 
 
@@ -616,7 +616,7 @@ Le signe `=` affecte cette fonction à une variable, ici `somme`, c'est le nom d
     ```
 
 
-Réduite à une seule expression, les fonctions lambda permettent d'utiliser une instruction conditionnelle écrite sous une forme un peu différente que [vue précedemment](4-constructions-elementaires.md#instructions-conditionnelles) : 
+Réduite à une seule expression, les fonctions lambda permettent d'utiliser une instruction conditionnelle écrite sous une forme un peu différente que [vue précédemment](4-constructions-elementaires.md#instructions-conditionnelles) : 
 
 ``` py
 >>> entre_10_et_20 = lambda x: True if (x > 10 and x < 20) else False                     
