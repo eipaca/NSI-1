@@ -61,7 +61,7 @@ Les clés de dictionnaire ne sont pas forcément des chaînes de caractères. Ic
 >>> d
 {'0': 0, '1': 1, '2': 4, '3': 9, '4': 16, '5': 25, '6': 36, '7': 49, '8': 64, '9': 81}
 ```
-Il est aussi possbile d'utiliser d'autres types de variables comme des p-uplets, mais :warning: les tableaux ne peuvent pas être les clés d'un dictionnaire (car muables) :
+Il est aussi possible d'utiliser d'autres types de variables comme des p-uplets, mais :warning: les tableaux ne peuvent pas être les clés d'un dictionnaire (car muables) :
 
 ``` py
 >>> d = {(0, 0): 'X', (0, 1): 'O', (1, 0): 'O', (1, 1): 'X'}
@@ -95,7 +95,7 @@ KeyError: 1
 
 Ce sont les **clés** du dictionnaire qui permettent d'accéder aux valeurs. Pour récupérer la valeur associée à la clé `key`  dans un dictionnaire `d`, il suffit d'utiliser la syntaxe suivante `d[key]`[^3.2]. 
 
-[^3.2]: Ou alors utiliser en utilsant la méthode `.get()` qui permet de récupérer la valeur associée à une clé ou afficher un message si elle n'existe pas :
+[^3.2]: Ou alors utiliser en utilisant la méthode `.get()` qui permet de récupérer la valeur associée à une clé ou afficher un message si elle n'existe pas :
     ``` py
     >>> capitale.get('France')
     'Paris'
@@ -113,7 +113,7 @@ mais un erreur est levée si la clé n'existe pas :
 >>> capitales['Allemagne']
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-KeyError: 'allemagne'
+KeyError: 'Allemagne'
 ```
 
 
@@ -207,7 +207,7 @@ Mais dans un dictionnaire, si on essaie de modifier la valeur d'une clé qui n'e
 
 ###	Supprimer des éléments
 
-Comme pour les tableaux, il est possible d'utiliser les methodes `pop()` et `clear()` (mais pas `remove()`) pour supprimer des couples de clé-valeur :
+Comme pour les tableaux, il est possible d'utiliser les méthodes `pop()` et `clear()` (mais pas `remove()`) pour supprimer des couples de clé-valeur :
 
 
 - `d.pop(key)`[^3.3] supprime du dictionnaire la clé `key` et renvoie la valeur associée :	
@@ -228,7 +228,7 @@ Comme pour les tableaux, il est possible d'utiliser les methodes `pop()` et `cle
 Comme pour les tableaux, le mot clé `del` permet aussi de supprimer un élément d'un dictionnaire :
 
 ``` py
->>> del capitalse['Allemagne']
+>>> del capitales['Allemagne']
 >>> capitales
 {'Espagne': 'Madrid', 'France': 'Paris', 'Italie': 'Roma'} 
 ```
@@ -317,7 +317,7 @@ Appelons ces fonctions en passant des variables `a` et `d` en paramètre [^3.5]:
 
 ##	Conversion de type (cast)
 
-La fonction `dict(tableau de p-uplets)` transforme un tableau de tuples (comme obtenu par `items()` en dictionnaire :
+La fonction `dict(tableau de p-uplets)` transforme un tableau de tuples (comme obtenu par `items()`) en dictionnaire :
 
 ``` py
 >>> dict([("one" , 1), ("two" , 2), ("three" , 3)])
