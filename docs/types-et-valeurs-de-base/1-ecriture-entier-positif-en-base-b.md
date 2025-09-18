@@ -135,7 +135,7 @@ def etoile(n):
     Source : [https://fr.wikipedia.org/wiki/Nombre_harshad](https://fr.wikipedia.org/wiki/Nombre_harshad).
 	
 	
-	Écrire un programme demande un nombre entier et affiche s'il est un nombre de harshad ou pas.
+	Écrire un programme demande un nombre entier et affiche s'il est un nombre harshad ou pas.
 
 	
 
@@ -144,14 +144,15 @@ def etoile(n):
 
     ``` py
 	n = int(input())
+	n_initial = n
 	somme = 0
 	while n > 0:
 		somme = somme + n % 10
 		n = n // 10
-	if n % somme == 0:
-		print(n, "est un nombre de harshad")
+	if n_initial % somme == 0:
+		print(n_initial, "est un nombre de harshad")
 	else:
-		print(n, "n'est pas un nombre de harshad")
+		print(n_initial, "n'est pas un nombre de harshad")
 
 	```
    
