@@ -155,3 +155,118 @@ def etoile(n):
 		print(n_initial, "n'est pas un nombre de harshad")
 
 	```
+   
+
+## Système binaire ou base 2
+
+!!! abstract "Cours" 
+	En binaire, ou base 2, les seuls chiffres utilisés pour écrire des nombres sont 0 et 1, aussi appelés « bits » pour *binary digits*, ou « chiffres binaires » en français. 
+
+	8 bits forment un **octet**.
+
+
+
+Par exemple on peut écrire $1101$, que l'on note aussi $1101_2$, pour indiquer qu'il est écrit en binaire.
+
+Il convient également de ne pas lire ces nombres comme on lirait des nombres décimaux. Ainsi, $1101_2$ ne se dit pas « mille cent un » mais plutôt « un un zéro un ».
+
+Comme dans le système décimal, c'est la position qui indique le poids de chaque bit dans un nombre. Mais en binaire, c'est une combinaison linéaire de puissances de 2. Par exemple, les bits du nombre $1101_2$ correspondent à :
+
+|bits|1|1|0|1|
+|:-:|:-:|:-:|:-:|:-:|
+|i|3|2|1|0|
+|$2^i$|$2^3=8$|$2^2=4$|$2^1=2$|$2^0=1$|
+|combinaison|$1 \times 2^3=8$|$1 \times 2^2=4$|$0 \times 2^1=0$|$1 \times 2^0=1$|
+
+
+
+$1101_2 = 1 × 2^3 + 1 × 2^2 + 0 × 2^1 + 1 × 2^0 = 13_{10}$
+
+Noter le $..._{10}$ pour indiquer que $13$ est un nombre en base 10.
+
+
+
+!!! abstract "Cours" 
+
+	De manière générale, un nombre $n$ qui s'écrit dans le système binaire avec $p$ bits $b_{p−1}b_{p−2}...b_2b_1b_0$  (chaque $b_i$ est un bit valant 0 ou 1) a une valeur décimale égale à : 
+
+	$n = b_{p−1} \times 2^{p−1}  + b_{p−2} \times 2^{p−2} + ... +  b_2 \times 2^2 + b_1 \times 2^1  + b_0 \times 2^0$
+
+	ou encore avec la formule mathématique d'une somme de $0$ à $p-1$ :
+	$n = \sum_{i=0}^{p-1} b_i × 2^i$
+
+
+
+
+	
+
+
+
+### Écrire un nombre binaire en décimal
+
+La formule précédente permet d'écrire facilement un nombre binaire en décimal. Il suffit de multiplier chaque bit par la puissance de 2 correspondante et de faire la somme des valeurs obtenues. 
+
+Énumérons les premiers nombres binaires et quelques autres :
+
+|binaire|combinaison|décimal|
+|-:|:-|:-|
+|$0$|0|0||
+|$1$|$1 \times 2^0$|1|
+|$10$|$1 \times 2^1$|2|
+|$11$|$1 \times 2^1 + 1 \times 2^0$|3|
+|$100$|$1 \times 2^2$|4|
+|$101$|$1 \times 2^2 + 1 \times 2^0$|5|
+|$110$|$1 \times 2^2 + 1 \times 2^1$|6|
+|$111$|$1 \times 2^2 + 1 \times 2^1 + 1 \times 2^0$|7|
+|$1000$|$1 \times 2^3$|8|
+|$1 \space 0000$|$1 \times 2^4$|16|
+|$10 \space 0000$|$1 \times 2^5$|32|
+|$100 \space 0000$|$1 \times 2^6$|64|
+|$1000 \space 0000$|$1 \times 2^7$|128|
+|$1111 \space 1111$|$1 \times 2^8 + 1 \times 2^7 + 1 \times 2^6 +...1 \times 2^0$|255|
+
+
+!!! question "Exercice corrigé" 
+    Calculer la valeur décimale des nombres binaires suivants :
+
+	- 11010
+	- 10101
+	- 11100110
+
+	
+
+??? Success "Réponse"
+    
+	$11010_2 = 1 \times 2^4 + 1 \times 2^3 + 1 \times 2^1 = 16 + 8 + 2 = 26_{10}$
+	
+	$1 \space 0101_2 = 1 \times 2^4 + 1 \times 2^2 + 1 \times 2^0 = 16 + 4 + 1= 21_{10}$
+	
+	$1110 \space 0110_2 = 1 \times 2^7 + 1 \times 2^6 + 1 \times 2^5 + 1 \times 2^2 + 1 \times 2^1 = 
+	128 + 64 + 32 + 4 + 2=230_{10}$
+
+
+
+
+
+Traduisons cela en Python. Pour plus de simplicité, on peut parcourir le nombre binaire de gauche à droite.
+
+
+``` py
+def bin_to_dec(n):
+    """ str -> int
+	Renvoie l'écriture décimale de la chaine de caractère n représentant un nombre binaire
+	"""
+    dec = 0
+    for i in range(len(n)):
+	    dec = dec + int(n[-i-1]) * 2**i
+	return dec
+```
+
+
+En Python, les nombres binaires s'écrivent avec le préfixe ```0b``` et l'équivalent en décimal est affiché automatique dans la console :
+
+``` py
+>>> 0b1101
+13
+```
+
