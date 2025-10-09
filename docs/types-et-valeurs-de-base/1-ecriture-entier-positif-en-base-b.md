@@ -487,18 +487,18 @@ def dec_to_bin(n):
     """ int -> str
 	Renvoie l'écriture binaire de l'entier n 
 	"""
-    bin = ''
+    b = ''
     while n > 0:
-		bin =  str(n % 2) + bin     
+		b =  str(n % 2) + b     
 		n = n // 2
-	return bin
+	return b
    
 
 >>> bin_to_dec(13)
 '1101'
 ```
 
-:warning: Il faut écrire `bin =  str(n % 2) + bin` et non pas `bin =  bin + str(n % 2)`, c''est un bug classique, car le premier bit trouvé est $b_0$ et le dernier est $b_{p−1}$.
+:warning: Il faut écrire `b =  str(n % 2) + b` et non pas `b =  b + str(n % 2)`, c''est un bug classique, car le premier bit trouvé est $b_0$ et le dernier est $b_{p−1}$.
 
 On note que le cas ou `n` est égal à `0`, la fonction n'entre pas dans la boucle `while` et renvoie une chaîne vide. On peut traiter le cas séparément au début de la fonction :
 
@@ -510,11 +510,11 @@ def dec_to_bin(n):
 	"""
 	if n == 0:
 		return '0'
-    bin = ''
+    b = ''
     while n > 0:
-		bin =  str(n % 2) + bin
+		b =  str(n % 2) + b
 		n = n // 2
-	return bin
+	return b
    
 ```
 
@@ -669,3 +669,4 @@ Les quatre opérations de base (addition, soustraction, multiplication et divisi
 
 		$1000 \times 1000 = 1000000$
 		
+
