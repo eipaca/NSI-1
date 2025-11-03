@@ -268,6 +268,7 @@ def parfait(nombre):
 
 
 Par exemple :
+
 - une précondition à une fonction effectuant une division est de s’assurer que le dénominateur est non nul, 
 
 - une postcondition à une fonction renvoyant la valeur absolue d’un nombre est de vérifier que la fonction renvoie une valeur positive.
@@ -575,5 +576,6 @@ def est_premier(nombre):
 
 doctest.testmod()
 ```
+
 
 
