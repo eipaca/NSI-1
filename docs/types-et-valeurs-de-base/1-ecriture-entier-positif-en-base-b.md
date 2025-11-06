@@ -671,7 +671,7 @@ Les quatre opérations de base (addition, soustraction, multiplication et divisi
 		
 
 
-## Hexadécimal ou base 16
+## Système hexadécimal ou base 16
 
 Le système hexadécimal, ou base 16, est souvent utilisé en informatique, par exemple dans les adresses IPv6 ou pour définir les couleurs dans un fichier CSS, car il offre un bon compromis entre le système binaire utilisé par les machines tout en restant lisible pour les informaticiens.  
 
