@@ -679,16 +679,16 @@ Le système hexadécimal, ou base 16, est souvent utilisé en informatique, par 
 Dans le système hexadécimal, ou en base 16, on utilise 16 symboles, appelés chiffres hexadécimaux : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F. Voilà leur équivalent décimal et binaire :
 
 
-|hexadécimal|décimal|binaire||hexadécimal|décimal|binaire|
-|:-:|-:|-:||:-:|-:|-:|
-|0|0|0000||8|8|1000|
-|1|1|0001||9|9|1001|
-|2|2|0010||A|10|1010|
-|3|3|0011||B|11|1011|
-|4|4|0100||C|12|1100|
-|5|5|0101||D|13|1101|
-|6|6|0110||E|14|1110|
-|7|7|0111||F|15|1111|
+|hexadécimal|décimal|binaire|\||hexadécimal|décimal|binaire|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|0|0|0000|\||8|8|1000|
+|1|1|0001|\||9|9|1001|
+|2|2|0010|\||A|10|1010|
+|3|3|0011|\||B|11|1011|
+|4|4|0100|\||C|12|1100|
+|5|5|0101|\||D|13|1101|
+|6|6|0110|\||E|14|1110|
+|7|7|0111|\||F|15|1111|
 
 
 
