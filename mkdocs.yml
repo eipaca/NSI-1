@@ -120,9 +120,9 @@ nav:
   #  - Représentation d'un texte en machine: types-et-valeurs-de-base/5-representation-texte.md
 
 
-  #- Types construits: 
-  #  - types-construits/index.md
-  #  - p-uplets: types-construits/1-p-uplets.md
+  - Types construits: 
+    - types-construits/index.md
+    - p-uplets: types-construits/1-p-uplets.md
   #  - Tableaux: types-construits/2-tableaux.md
   #  - Dictionnaires: types-construits/3-dictionnaires.md
   #  - Comparaisons: types-construits/4-comparaisons.md
