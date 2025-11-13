@@ -1063,15 +1063,9 @@ En base $b$, on utilise $b$ symboles, appelés chiffres, de valeurs allant de 0 
 	$n = \sum_{i=0}^{p-1} a_i × b^i$
 
 
-On peut écrire les $b$ premiers nombres entre 0 et $b-1$ avec 1 seul chiffre, $b^2$ nombres allant de 0 à $b^2-1$ avec 2 chiffres, ... $b^p$ nombres allant de 0 à $b^p-1$ avec $p$ chiffres.
-
-
 
 
 ### Écrire un nombre en base b en décimal et réciproquement
-
-De la même 
-La formule précédente permet d'écrire facilement un nombre hexadécimal en décimal. Il suffit de multiplier chaque chiffre hexadécimal par la puissance de 16 correspondante et de faire la somme des valeurs obtenues. 
 
 Comme pour le binaire et l'hexadécimal, on peut écrire un nombre en base $b$ en décimal en calculant la formule avec les puissances de $b$ et retrouver l'écriture en base $b$ d'un nombre décimal par une suite de divisions entières par $b$.
 
@@ -1100,6 +1094,20 @@ Réciproquement, on peut écrire $64_{10}$ en base 3 par une succession de divis
 En utilisant les restes de divisions successives par $3$, en remontant à partir du dernier calculé jusqu'au premier, on obtient $64_{10} = 2101_3$
 
 
+!!! question "Exercice corrigé" 
+	Convertir en base 10 ne nombre qui s'écrit 7H3 en base 19.
+	
+	
+
+??? Success "Réponse"
+	Notons que H en base 19 est égal à 17 en base 10 ($A_{19}=10_{10}$, $B_{19}=11_{10}$, ..., $G_{19}=16_{10}$, et $H_{19}=14_{10}$).
+
+	On peut alors calculer : 
+	$7H3_{19} = 7 \times 19^2 +  17 \times 19^1 3 \times 19^0 = $
+	
+
+
+
 En Python, la fonction `int()` permet de convertir une chaine de caractère en précisant la base avec le paramètre par mot clé `base`. 
 
 Exemple 45 en base 6 est égal à 29 en base 10 ($4 \times 6  + 5$) : 
@@ -1107,7 +1115,3 @@ Exemple 45 en base 6 est égal à 29 en base 10 ($4 \times 6  + 5$) :
 >>> int('6103', base=7)
 2110
 ```
-
-
-
-
