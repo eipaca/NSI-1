@@ -123,7 +123,7 @@ nav:
   - Types construits: 
     - types-construits/index.md
     - p-uplets: types-construits/1-p-uplets.md
-  #  - Tableaux: types-construits/2-tableaux.md
+    - Tableaux: types-construits/2-tableaux.md
   #  - Dictionnaires: types-construits/3-dictionnaires.md
   #  - Comparaisons: types-construits/4-comparaisons.md
   #  - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
