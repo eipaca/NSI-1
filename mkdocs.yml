@@ -117,7 +117,7 @@ nav:
     - Représentation des nombres entiers en machine et entiers relatifs: types-et-valeurs-de-base/2-representation-des-entiers-en-machine-entiers-relatifs.md
     - Représentation approximative des nombres réels: types-et-valeurs-de-base/3-representation-approximative-nombres-reels.md
     - Valeurs, opérateurs et expressions booléens: types-et-valeurs-de-base/4-valeurs-expressions-booleennes.md
-  #  - Représentation d'un texte en machine: types-et-valeurs-de-base/5-representation-texte.md
+    - Représentation d'un texte en machine: types-et-valeurs-de-base/5-representation-texte.md
 
 
   - Types construits: 
@@ -125,8 +125,8 @@ nav:
     - p-uplets: types-construits/1-p-uplets.md
     - Tableaux: types-construits/2-tableaux.md
     - Dictionnaires: types-construits/3-dictionnaires.md
-  #  - Comparaisons: types-construits/4-comparaisons.md
-  #  - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
+    - Comparaisons: types-construits/4-comparaisons.md
+    - Chaînes de caractères: types-construits/5-chaines-de-caracteres.md
 
   #- Traitement des données en table: 
   #  - donnees-en-tables/index.md
