@@ -140,6 +140,13 @@ nav:
   #- Interactions entre l’homme et la machine sur le Web: 
   #  - ihm-sur-web/index.md
 
+  - Architectures matérielles et systèmes d'exploitation:
+    - architecture-materielles-et-systemes-d-exploitation/index.md
+    - Modèle d'architecture séquentielle (von Neumann): architecture-materielles-et-systemes-d-exploitation/1-modele-architecture-sequentielle.md
+ #   - Réseaux: architecture-materielles-et-systemes-d-exploitation/2-reseaux.md
+ #   - Systèmes d'exploitation: architecture-materielles-et-systemes-d-exploitation/3-systemes-exploitation.md
+ #   - Périphériques d'E/S, Interface Homme Machine (IHM): architecture-materielles-et-systemes-d-exploitation/4-peripheriques-es-ihm.md
+
   - Langages et programmation(1): 
     - langages-et-programmation/index.md
     - Variables et affectation: langages-et-programmation/1-variables-affectation.md
