@@ -25,7 +25,7 @@ Dans cet exemple, on a trié un tableau de nombres entiers. On peut faire la mê
 ```
 
 
-Noter que  `.sort()` est une méthode réservée aux tableaux, c'est-à-dire aux variables de type `list`. Elle ne s'applique pas aux p-uplets ou aux dictionnaires :
+Noter que  `.sort()` est une méthode réservée aux tableaux, c'est-à-dire aux variables de type `list`. Elle ne s'applique pas aux p-uplets ni aux dictionnaires :
 
 ``` py
 >>> puplet  = (5, 2, 3, 1, 4)
