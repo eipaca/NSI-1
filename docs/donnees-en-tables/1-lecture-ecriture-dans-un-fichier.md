@@ -98,22 +98,22 @@ with open('fichier.txt', 'w') as f:
 Dans ce cas-là, le fichier est automatiquement fermé à la fin du bloc d'instructions (attention à l'indentation), il n'y a pas besoin de le fermer, cela évite beaucoup d'erreurs.
 
 ##	encodage
-On peut aussi préciser l'encodage lorsqu'on ouvre un fichier en lecture avec le paramètre `encode`, par exemple `encode="utf-8"` ou `encode="latin-1"` : 
+On a aussi souvent besoin de préciser l'encodage des caractères lorsqu'on ouvre un fichier en lecture avec le paramètre par mot-clé `encode`, par exemple en ajoutant`encode="utf-8"` ou `encode="latin-1"` : 
 
 === "f = open(...)"
     ``` py
-    f = open('pays.txt, 'r', encode="utf-8")
+    f = open(fichier.txt, 'r', encode="utf-8")
     ...
     f.close()	
     ```
 
 === "with open(...) as f:"
     ``` py
-    with open('pays.txt', 'r', encode="utf-8") as f:
+    with open(fichier.txt', 'r', encode="utf-8") as f:
          ...
        
     ```
-Si on ne précises rien, Python utilise l’encodage par défaut du système d'exploitation.
+Si on ne précise rien, Python utilise l’encodage par défaut du système d'exploitation.
 
 
 ##	Écrire dans un fichier
