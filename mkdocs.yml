@@ -162,8 +162,9 @@ nav:
   #  - Types de langages: langages-et-programmation-2/1-types-de-langages.md
   #  - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
 
-  #- Algorithmique: 
-  #  - algorithmique/index.md
+  - Algorithmique: 
+    - algorithmique/index.md
+    - Parcours séquentiel d'un tableau: algorithmique/1-parcours-sequentiel-tableau.md  
   #  - Tris: algorithmique/2-tris.md 
   #  - k plus proches voisins: algorithmique/3-kppv.md 
   #  - Recherche dichotomique dans un tableau trié: algorithmique/4-recherche-dichotomique-tableau-trie.md
