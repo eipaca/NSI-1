@@ -10,7 +10,8 @@ Pour trier en ordre croissant de façon simple et facile, le type `list` offre u
 >>> tab
 [1, 2, 3, 4, 5]
 ```
-Noter que `tab.sort()` a modifié le tableau `tab` et a renvoyé `None`.
+
+L'instruction `tab.sort()` a modifié le tableau `tab` et a renvoyé `None`.
 
 
 Dans cet exemple, on a trié un tableau de nombres entiers. On peut faire la même chose avec un tableau de nombres décimaux (`float`)  ou de chaines de caractères. :warning: Les chaines de caractères sont triées par ordre lexicographique[^4.1].
@@ -51,7 +52,8 @@ Au contraire de `.sort()`, la fonction `sorted()` accepte n'importe quel itérab
 >>> sorted({'un':1, 'deux':2, 'trois':3 })
 ['deux', 'trois', 'un']
 ```
-Noter que `sorted()` renvoie toujours un tableau, même pour trier un p-uplet ou un dictionnaire. Et dans le cas d'un dictionnaire, ce sont les clés qui sont triées et renvoyées.
+
+La fonction `sorted()` renvoie toujours un tableau, même pour trier un p-uplet ou un dictionnaire. Et dans le cas d'un dictionnaire, ce sont les clés qui sont triées et renvoyées.
 
 :warning: Attention pour les tableaux, à la différence de `.sort()`, le tableau trié n'est pas modifié, c'est un nouveau tableau trié qui renvoyé par `sorted()` :
 
@@ -71,7 +73,7 @@ Noter que `sorted()` renvoie toujours un tableau, même pour trier un p-uplet ou
 ```
 
 
-On peut trier sur des types construits, dans ce cas le tri est fait par ordre des éléments. Par exemple, pour trier notre tableau de tableaux `pays`.
+On peut trier sur des tableaux de tableaux ou tableaux de p-uplets, dans ce cas le tri est fait par ordre des éléments. Par exemple, pour trier notre tableau de tableaux `pays`.
 
 ``` py
 >>> pays
@@ -81,7 +83,8 @@ On peut trier sur des types construits, dans ce cas le tri est fait par ordre de
 >>> sorted(pays)
 ['Espagne', 'Madrid', '48'], 'France', 'Paris', '68'], ['Italie', 'Rome', '60']]]
 ```
-Dans ce cas, le tri se fait en comparant les premières valeurs de chaque sous-tableau  :  `'Espagne' < 'France'< 'Italie' `. 
+
+Ici, le tri s'est effectué en comparant les premières valeurs de chaque sous-tableau  :  `'Espagne' < 'France'< 'Italie' `. 
 
 Par contre, on ne peut pas trier un tableau de dictionnaires :
 
@@ -94,7 +97,7 @@ Traceback (most recent call last):
   File "<interactive input>", line 1, in <module>
 TypeError: '<' not supported between instances of 'dict' and 'dict' 
 ```
-On ne peut pas comparer les dictionnaire, il faut préciser une clé de tri.
+Il faut préciser une clé de tri.
 
 ## Paramètre key
 
@@ -114,7 +117,7 @@ en précisant que les données doivent être converties en entier par la fonctio
 ['1', '3', '5', '11', '21']
 ```
 
-De la même façon, le paramètre `key` permet de trier une table en précisant les colonnes selon lesquelles on veut trier. Par exemple, si on veut trier le tableau de tableaux des pays selon leur population :
+De la même façon, le paramètre `key` permet de trier des données en table en précisant les colonnes selon lesquelles on veut trier. Par exemple, si on veut trier le tableau de tableaux des pays selon leur population :
 
 ``` py
 >>> pays
@@ -131,7 +134,7 @@ def popul(x):
     return int(x[2])
 ```
 
-et qui sert de clé de `sorted()` :
+et qui sert de clé à la fonction `sorted()` :
 
 ``` py
 >>> sorted(pays, key=popul)
