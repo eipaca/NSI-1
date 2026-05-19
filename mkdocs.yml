@@ -167,6 +167,6 @@ nav:
     - algorithmique/index.md
     - Parcours séquentiel d'un tableau: algorithmique/1-parcours-sequentiel-tableau.md  
     - Tris: algorithmique/2-tris.md 
-  #  - k plus proches voisins: algorithmique/3-kppv.md 
+    - k plus proches voisins: algorithmique/3-kppv.md 
     - Recherche dichotomique dans un tableau trié: algorithmique/4-recherche-dichotomique-tableau-trie.md
-  #  - Algorithmes gloutons: algorithmique/5-algorithmes-gloutons.md
+    - Algorithmes gloutons: algorithmique/5-algorithmes-gloutons.md
