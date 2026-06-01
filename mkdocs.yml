@@ -158,10 +158,10 @@ nav:
     - Modules et bibliothèques: langages-et-programmation/6-modules-bibliotheques.md
     - Mise au point des programmes et gestion des bugs: langages-et-programmation/7-mise-au-point-gestion-bugs.md
   
-  #- Langages et programmation(2): 
-  #  - langages-et-programmation-2/index.md
-  #  - Types de langages: langages-et-programmation-2/1-types-de-langages.md
-  #  - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
+  - Langages et programmation(2): 
+    - langages-et-programmation-2/index.md
+    - Types de langages: langages-et-programmation-2/1-types-de-langages.md
+    - Paradigmes de programmation: langages-et-programmation-2/2-paradigmes-de-programmation.md
 
   - Algorithmique: 
     - algorithmique/index.md
