@@ -10,11 +10,11 @@
 Par exemple :
 
 - `a = 2` est une instruction qui affecte la valeur `2` à la variable `a`.
-- `print('Hello world')` est une instruction qui affiche la chaine  `'Hello world'` dans la console.
+- `print('Hello world')` est une instruction qui affiche la chaîne  `'Hello world'` dans la console.
 - `a == 2` n'est pas une instruction, c'est une expression qui compare la valeur de `a` à `2`, la valeur de cette expression est `True` ou `False`.
 
 ## `type()`
-La fonction `type()` permet de connaitre le type d’une variable.[^3.1]
+La fonction `type()` permet de connaître le type d’une variable.[^3.1]
 
 [^3.1]: Nous n’abordons pas la notion de classe ici.
 
@@ -35,16 +35,16 @@ La fonction `type()` permet de connaitre le type d’une variable.[^3.1]
 
 ## Conversion de type
 
-Les fonctions suivantes permettent de convertir une variable d’un type à un autre :
+Les fonctions suivantes permettent de convertir une valeur d’un type à un autre :
 
 |fonction|description|exemple|
 |---|---|---|
-|`int()`|Convertit une chaine de caractères ou un flottant en entier.|`>>> int(2.8)`<br>`2`<br>`>>> int('2')`<br>`2`|
-|`float()`|Convertit une chaine de caractères ou un entier en flottant.|`>> float(5)`<br>`5.0`<br>`>>> float('5.5')`<br>`5.5`|
-|`str()`|Convertit un entier ou un flottant en une chaine de caractères.|`>>> str(5.5)`<br>`'5.5'`|
+|`int()`|Convertit une chaîne de caractères ou un flottant en entier.|`>>> int(2.8)`<br>`2`<br>`>>> int('2')`<br>`2`|
+|`float()`|Convertit une chaîne de caractères ou un entier en flottant.|`>> float(5)`<br>`5.0`<br>`>>> float('5.5')`<br>`5.5`|
+|`str()`|Convertit un entier ou un flottant en une chaîne de caractères.|`>>> str(5.5)`<br>`'5.5'`|
 
 	
-Observons dans la console comment une variable de type `float` qui a une valeur entière est affiché avec un point :
+Observons dans la console comment une variable de type `float` qui a une valeur entière est affichée avec un point :
 
 ``` py
 >>> a = 5
@@ -71,7 +71,7 @@ La valeur renvoyée par `input()` est toujours du type `str` :
 >>> nombre_entier
 '25'
 ```
-Ici la valeur affectée à `nombre_entier` est une chaine de caractères : `'25'`. Pour obtenir un nombre, de type `int` ou `float`, afin de faire des calculs par la suite par exemple, il faut la convertir :
+Ici la valeur affectée à `nombre_entier` est une chaîne de caractères : `'25'`. Pour obtenir un nombre, de type `int` ou `float`, afin de faire des calculs par la suite par exemple, il faut la convertir :
 
 ``` py
 >>> nombre_entier = int(input('Entrez un nombre entier'))
@@ -103,14 +103,14 @@ le nombre est 5
 la somme de 5 et de 6 est 11
 ```
 
-Par défaut, `print()` provoque un retour à la ligne après chaque affichage. Pour changer ce comportement il faut préciser la fin de l’affichage en ajoutant un paramètre `end=` suivi d'une chaine de caractères, par exemple un espace `end=' '` ou même une chaine vide `end=''`. 
+Par défaut, `print()` provoque un retour à la ligne après chaque affichage. Pour changer ce comportement il faut préciser la fin de l’affichage en ajoutant un paramètre `end=` suivi d'une chaîne de caractères, par exemple un espace `end=' '` ou même une chaîne vide `end=''`. 
 
 ``` py
 >>> print('Hello', end=' ')
 Hello >>>
 ```
 
-Python 3.6 a introduit les chaine de caractères f-strings (*formatted string*) qui s’écrivent avec `f` devant et permettent d’y insérer des variables, ou même des expressions, entre accolades. 
+Python 3.6 a introduit les chaîne de caractères f-strings (*formatted string*) qui s’écrivent avec `f` devant et permettent d’y insérer des variables, ou même des expressions, entre accolades. 
 ``` py
 >>> prenom = 'Paul'
 >>> annee_naissance = 2010
@@ -190,7 +190,7 @@ Notons au passage une différence importante entre l'affichage d'une variable de
 	Pour passer d’un pixel couleur codé RGB (mélange des trois couleurs rouge, vert, bleu) à un pixel en nuance de gris, on utilise la formule suivante qui donne le niveau de gris :
 	$G = 0,11 \times R + 0,83 \times V + 0,06 \times B$ où $R$, $V$ et $B$ sont les niveaux de rouge, vert et bleu.
 
-	Ecrire le programme qui demande en entrée les 3 couleurs d’un pixel et affiche en sortie la nuance de gris.
+	Écrire le programme qui demande en entrée les 3 couleurs d’un pixel et affiche en sortie la nuance de gris.
 
 ??? Success "Réponse"
 	Quelques questions à se poser avant d'écrire le programme demandé :
