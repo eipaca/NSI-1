@@ -142,7 +142,7 @@ nav:
     #- Interaction client-serveur, requête HTTP, méthodes GET et POST: ihm-sur-web/2-client-serveur-http-get-post.md
 
   #- Architectures matérielles et systèmes d'exploitation:
-    {- architecture-materielles-et-systemes-d-exploitation/index.md
+    #- architecture-materielles-et-systemes-d-exploitation/index.md
     #- Modèle d'architecture séquentielle (von Neumann): architecture-materielles-et-systemes-d-exploitation/1-modele-architecture-sequentielle.md
     #- Réseaux: architecture-materielles-et-systemes-d-exploitation/2-reseaux.md
     #- Systèmes d'exploitation: architecture-materielles-et-systemes-d-exploitation/3-systemes-exploitation.md
