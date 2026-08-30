@@ -9,7 +9,7 @@
 
 ## Principe
 
-On a vu dans le chapitre sur les [types construits](../../types-construits/2-tableaux) comment parcourir un tableau Python avec une boucle `while` (parcours par indice) ou `for` (parcours par indice ou par valeur)  pour accéder à chaque élément du tableau dans l'ordre.
+On a vu dans le chapitre sur les [types construits](../types-construits/2-tableaux.md) comment parcourir un tableau Python avec une boucle `while` (parcours par indice) ou `for` (parcours par indice ou par valeur)  pour accéder à chaque élément du tableau dans l'ordre.
 
 
 

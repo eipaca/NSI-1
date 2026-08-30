@@ -36,7 +36,7 @@ def tri_selection(T):
 
         # On cherche l'indice de la plus petite valeur après i
         i_min = i
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if T[j] < T[i_min]:
                 i_min = j
 
@@ -113,11 +113,11 @@ L'algorithme du tri par insertion pour trier un tableau `T` de `n` valeurs consi
 
 - On commence à `j = i `.
 
-- Tant que `T[j-1] > valeur_insertion` (et que `j > 0`) :
+- Tant que `T[j-1] > valeur_insertion` (et que `j > 0`) :
 
-    - On décale `T[j-1]` d’une position vers la droite : `T[j] = T[j-1]`.
+    - On décale `T[j-1]` d’une position vers la droite : `T[j] = T[j-1]`.
 
-    - On continue vers la gauche : `j = j - 1`.
+    - On continue vers la gauche : `j = j - 1`.
 
 - On insère `valeur_insertion` à sa position en `j`.
 
@@ -141,7 +141,7 @@ def tri_insertion(T):
         
         # On décale les éléments plus grands que valeur_insertion
         j = i
-        while j > 0 and valeur_insertion < T[j - 1] :
+        while j > 0 and valeur_insertion < T[j - 1]:
             T[j] = T[j - 1]
             j = j - 1
         
