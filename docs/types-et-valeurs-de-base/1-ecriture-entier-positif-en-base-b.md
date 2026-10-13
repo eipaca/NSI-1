@@ -1,4 +1,4 @@
-6# Écriture d’un entier positif dans une base b >= 2
+# Écriture d’un entier positif dans une base b >= 2
 
 ## Système décimal ou base 10
 
@@ -267,7 +267,6 @@ def bin_to_dec(n):
 ```
 
 
-
 La correspondance entre la position d'un bit (`-i-1`) dans la chaîne de caractère `n` et la puissance de 2 associée (`i`) est source d'erreur. Une autre façon de programmer cette même fonction consiste à additionner les bits de gauche à droite avec des multiplications successives par 2 : 
 
 ``` py
@@ -283,6 +282,7 @@ def bin_to_dec(n):
 
 ![Fonction bin_to_dec avec multiplications successives par 2](assets/1-bin-to-dec-2-light-mode.png#only-light){width=25% align=right}
 ![Fonction bin_to_dec avec multiplications successives par 2](assets/1-bin-to-dec-2-dark-mode.png#only-dark){width=25% align=right}
+
 
 
 Si `n` est une chaîne de caractères représentant un nombre de 4 bits, au final le premier bit sera bien multiplié par $2^3$, le deuxième bit par  $2^2$, le troisième par $2$ et le dernier sera rajouté tel quel à `dec` sans être multiplié.
@@ -544,7 +544,7 @@ def dec_to_bin(n):
 
 #### Fonction Python `bin`
 
-En Python, il existe bien sûr une fonction `bin` qui permet d'écrire un nombre décimal en binaire, mais il est souvent interdit de l'utiliser dans le cadre de NSI :
+En Python, il existe bien sûr une fonction `bin` qui permet d'écrire un nombre décimal en binaire, mais il est interdit de l'utiliser dans beaucoup d'exercices de NSI :
 
 ``` py
 >>> bin(13)
