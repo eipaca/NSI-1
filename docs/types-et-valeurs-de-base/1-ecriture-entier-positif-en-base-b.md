@@ -248,7 +248,11 @@ La formule précédente permet d'écrire facilement un nombre binaire en décima
 
 
 
-Traduisons cela en Python. Pour plus de simplicité, on peut parcourir la chaîne de caractères représentant le nombre binaire de la droite vers la gauche en utilisant des indices négatifs, -1 pour le dernier bit, -2 pour l'avant dernier, etc..
+![Fonction bin_to_dec avec indices négatifs](assets/1-bin-to-dec-1-light-mode.png#only-light){width=25% align=right}
+![Fonction bin_to_dec avec indices négatifs](assets/1-bin-to-dec-1-dark-mode.png#only-dark){width=25% align=right}
+
+
+Traduisons cela en Python. Pour plus de simplicité, on peut parcourir la chaîne de caractères représentant le nombre binaire de la droite vers la gauche en utilisant des indices négatifs, -1 pour le dernier bit, -2 pour l'avant dernier, etc.. 
 
 
 ``` py
@@ -261,6 +265,10 @@ def bin_to_dec(n):
 	    dec = dec + int(n[-i-1]) * 2**i
 	return dec
 ```
+
+
+![Fonction bin_to_dec avec multiplications successives par 2](assets/1-bin-to-dec-2-light-mode.png#only-light){width=25% align=right}
+![Fonction bin_to_dec avec multiplications successives par 2](assets/1-bin-to-dec-2-dark-mode.png#only-dark){width=25% align=right}
 
 La correspondance entre la position d'un bit (`-i-1`) dans la chaîne de caractère `n` et la puissance de 2 associée (`i`) est source d'erreur. Une autre façon de programmer cette même fonction consiste à additionner les bits de gauche à droite avec des multiplications successives par 2 : 
 
