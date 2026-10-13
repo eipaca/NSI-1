@@ -482,7 +482,7 @@ On obtient encore un bit 1.  Le quotient est 0, inutile de continuer les divisio
 ![Divisions euclidiennes successives de 13 par 2](assets/1-13-divise-par-2-5-dark-mode.png#only-dark){width=25% align=right}
 
 
-On a obtenu les bits de l'écriture binaire de $13_{10}$, mais :warning: en commençant par le dernier bit, il faut les lire de droite à gauche pour trouver $1101_2$.
+On a obtenu les bits de l'écriture binaire de $13_{10}$, mais :warning: en commençant par le dernier bit, il faut donc les lire à rebours pour trouver $1101_2$.
 
 
 !!! question "Exercice corrigé" 
@@ -859,14 +859,14 @@ On obtient le chiffre hexadécimal 0. Continuons avec 11. Le reste de la divisio
 >>> 11 // 16
 0
 ```
-On a obtenu le dernier chiffre hexadécimal, c'est B (11 en décimal).  Le quotient est 0, inutile de continuer les divisions, tous les chiffres hexadécimaux ont été trouvés.
+On obtient le chiffre hexadécimal B, ou 11 en décimal.  Le quotient est 0, inutile de continuer les divisions, tous les chiffres hexadécimaux ont été trouvés.
 
 
 ![Divisions euclidiennes successives de 45269 par 16](assets/1-45269-divise-par-16-5-light-mode.png#only-light){width=25% align=right}
 ![Divisions euclidiennes successives de 45269 par 16](assets/1-45269-divise-par-16-5-dark-mode.png#only-dark){width=25% align=right}
 
 
-On a obtenu les chiffres hexadécimaux de l'écriture binaire de $45269_{10}$, mais :warning: de gauche à droite, il faut donc les lire de droite à gauche pour trouver $B0D5_{16}$.
+On a obtenu les chiffres de l'écriture hexadécimale de $45269_{10}$, mais :warning: en commençant par le dernier chiffre, il faut donc les lire à rebours pour trouver $B0D5_{16}$.
 
 
 !!! question "Exercice corrigé" 
