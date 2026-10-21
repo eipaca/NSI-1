@@ -103,7 +103,7 @@ On a obtenu le chiffre 2.  Le quotient est 0, inutile de continuer les divisions
 
 Noter qu'on a obtenu les chiffres de l'écriture décimale de 2083, mais :warning: en commençant par le dernier chiffre, il faut donc les lire de droite à gauche pour retrouver 2083.
 
-On peut traduire cet algorithme en Python, par exemple pour écrire une fonction `etoile` qui renvoie une chaîne de caractère composées de tous les chiffres d'un nombre entier `n` suivis d'une étoile.
+On peut traduire cet algorithme en Python, par exemple pour écrire une fonction `etoile` qui renvoie une chaîne de caractères composées de tous les chiffres d'un nombre entier `n` suivis d'une étoile.
 
 ``` py
 def etoile(n):
@@ -258,7 +258,7 @@ Traduisons cela en Python. Pour plus de simplicité, on peut parcourir la chaîn
 ``` py
 def bin_to_dec(n):
     """ str -> int
-	Renvoie l'écriture décimale de la chaine de caractère n représentant un nombre binaire
+	Renvoie l'écriture décimale de la chaine de caractères n représentant un nombre binaire
 	"""
     dec = 0
     for i in range(len(n)):
@@ -267,12 +267,12 @@ def bin_to_dec(n):
 ```
 
 
-La correspondance entre la position d'un bit (`-i-1`) dans la chaîne de caractère `n` et la puissance de 2 associée (`i`) est source d'erreur. Une autre façon de programmer cette même fonction consiste à additionner les bits de gauche à droite avec des multiplications successives par 2 : 
+La correspondance entre la position d'un bit (`-i-1`) dans la chaîne de caractères `n` et la puissance de 2 associée (`i`) est source d'erreur. Une autre façon de programmer cette même fonction consiste à additionner les bits de gauche à droite avec des multiplications successives par 2 : 
 
 ``` py
 def bin_to_dec(n):
     """ str -> int
-	Renvoie l'écriture décimale de la chaine de caractère n représentant un nombre binaire
+	Renvoie l'écriture décimale de la chaine de caractères n représentant un nombre binaire
 	"""
     dec = 0
     for bit in n:
@@ -780,7 +780,7 @@ La traduction en Python est la même que pour le binaire, seulement il faut util
 ``` py
 def hex_to_dec(n):
     """ str -> int
-	Renvoie l'écriture décimale de la chaine de caractère n représentant un nombre hexadécimal
+	Renvoie l'écriture décimale de la chaine de caractères n représentant un nombre hexadécimal
 	"""
 	dec = 0
     for chiffre in n:
@@ -886,7 +886,7 @@ On a obtenu les chiffres de l'écriture hexadécimale de $45269_{10}$, mais :war
 
 
 
-La traduction en Python est la même que pour le binaire, seulement il faut écrire les restes en chiffres hexadécimaux, par exemple en utilisant un dictionnaire Python[^1.5] ou une chaîne de caractères `mapping = '0123456789ABCDEF'` permettant de passer d'un nombre décimal au chiffre hexadécimal correspondant. Avec les indices de position dans une chaîne de caractère, `mapping[0]` renvoie `'0'`, `mapping[1]` renvoie `'1'`, ...`mapping[10]` renvoie `'A'`, ... et `mapping[15]` renvoie `'F'`
+La traduction en Python est la même que pour le binaire, seulement il faut écrire les restes en chiffres hexadécimaux, par exemple en utilisant un dictionnaire Python[^1.5] ou une chaîne de caractères `mapping = '0123456789ABCDEF'` permettant de passer d'un nombre décimal au chiffre hexadécimal correspondant. Avec les indices de position dans une chaîne de caractères, `mapping[0]` renvoie `'0'`, `mapping[1]` renvoie `'1'`, ...`mapping[10]` renvoie `'A'`, ... et `mapping[15]` renvoie `'F'`
 
 [^1.5]: On crée un dictionnaire `mapping = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F'}` qui associe chaque valeur décimale à son chiffre hexadécimal correspondant, puis on utilise  `mapping[n % 16]` dans la fonction.
 
@@ -1142,7 +1142,7 @@ En utilisant les restes de divisions successives par $3$, en remontant à partir
 
 
 
-En Python, la fonction `int()` permet de convertir une chaîne de caractère en précisant la base avec le paramètre par mot clé `base`. 
+En Python, la fonction `int()` permet de convertir une chaîne de caractères en précisant la base avec le paramètre par mot clé `base`. 
 
 Exemple 6103 en base 7 est égal à 2110 en base 10 : 
 
