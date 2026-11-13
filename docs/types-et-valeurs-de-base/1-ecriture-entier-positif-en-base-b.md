@@ -1142,11 +1142,11 @@ En utilisant les restes de divisions successives par $3$, en remontant à partir
 
 
 
-En Python, la fonction `int()` permet de convertir en base 10 une chaîne de caractères en précisant la base avec le paramètre par mot clé `base`. 
+En Python, la fonction `int()` permet de convertir en base 10 une chaîne de caractères en précisant la base (par défaut 2). 
 
 Exemple 6103 en base 7 est égal à 2110 en base 10 : 
 
 ``` py
->>> int('6103', base=7)
+>>> int('6103', 7)
 2110
 ```
