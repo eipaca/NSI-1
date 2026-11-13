@@ -1132,17 +1132,17 @@ En utilisant les restes de divisions successives par $3$, en remontant à partir
 	
 
 ??? Success "Réponse"
-	Notons que H en base 19 est égal à 17 en base 10 ($A_{19}=10_{10}$, $B_{19}=11_{10}$, ..., $G_{19}=16_{10}$, et $H_{19}=14_{10}$).
+	Notons que H en base 19 est égal à 17 en base 10 ($A_{19}=10_{10}$, $B_{19}=11_{10}$, ..., $G_{19}=16_{10}$, et $H_{19}=17_{10}$).
 
 	On peut alors calculer : 
-	$7H3_{19} = 7 \times 19^2 +  17 \times 19^1 3 \times 19^0 = 2853_{10} $
+	$7H3_{19} = 7 \times 19^2 +  17 \times 19^1 3 \times 19^0 = 2853_{10}$
 
 	
 	
 
 
 
-En Python, la fonction `int()` permet de convertir une chaîne de caractères en précisant la base avec le paramètre par mot clé `base`. 
+En Python, la fonction `int()` permet de convertir en base 10 une chaîne de caractères en précisant la base avec le paramètre par mot clé `base`. 
 
 Exemple 6103 en base 7 est égal à 2110 en base 10 : 
 
