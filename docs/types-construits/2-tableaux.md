@@ -363,129 +363,194 @@ Réciproquement la méthode `.join()` permet de convertir un tableau en chaîne 
 
 ##	Création par compréhension
 
-Il est possible de créer un tableau par compréhension en utilisant l'une de ces syntaxes :
+On a vu qu'on pouvait créer un tableau en écrivant tous les éléments à la main :
 
--   avec une expression sur les valeurs dans un `ancien_tableau` ou d'une fonction `range` : 
-    ```py 
-    nouveau_tableau = [expression(i) for i in ancien_tableau]
-    nouveau_tableau = [expression(i) for i in range(...)]
-    ```
+``` py
+t = [0, 1, 4, 9, 16]
+```
 
-    Exemple :
+Mais cela devient rapidement impossible quand le tableau est grand ! On peut alors utiliser une boucle qui ajoute au tableau les éléments l'un après l'autre avec la méthode `append` :
+
+``` py
+t = []
+for i in range(5):
+    t.append(i ** 2)
+```
+
+Il existe une troisième méthode équivalent, mais plus courte et plus lisible : la **compréhension**.
+
+``` py
+t = [i ** 2 for i in range(5)]
+```
+On peut lire ça comme « le tableau des i ** 2 pour i allant de 0 à 4 ». C’est très proche de la notation mathématique $\{i^2 \mid i \in [0, 4]\}$.
+
+De façon générale, un tableau par compréhension s'écrit sous la forme : `[ expression  for x in  itérable ]`.
+
+
+Exemples :
+``` py
+[i + 1 for i in range(3)]          # [1, 2, 3]
+[str(i) for i in range(3)]         # ['0', '1', '2']
+[0 for _ in range(4)]              # [0, 0, 0, 0]
+["a" for _ in range(3)]            # ['a', 'a', 'a']
+```
+
+L’itérable peut être un tableau, un tuple, une chaîne de caractères, etc.
+
+``` py
+doubles = [2 * n for n in [5, 6, 8]]        # [10, 12, 16]
+majuscules = [c.upper() for c in "nsi"]     # ['N', 'S', 'I']
+```
+
+On peut ne garder que certains éléments en ajoutant une condition `if` placée à la fin, par exemple :
+
+``` py
+# Les nombres pairs de 0 à 9
+[i for i in range(10) if i % 2 == 0]         # [0, 2, 4, 6, 8]
+
+# Les notes supérieures ou égales à 10
+notes = [12, 7, 15, 8, 17]
+[n for n in notes if n >= 10]                # [12, 15, 17]
+
+# Le carré des multiples de 3 inférieurs à 20
+[i ** 2 for i in range(20) if i % 3 == 0]    # [0, 9, 36, 81, 144, 225, 324]
+```
+
+
+Le `if` _placé à la fin_ supprime des éléments. On peut aussi utiliser un `if … else` _placé dans l’expression_ pour transformer chaque élément sans en supprimer. :warning: Attention l'ordre est différent. 
+
+``` py
+notes = [12, 7, 15, 8]
+[n for n in notes if n >= 10]                         # [12, 15]         (2 éléments)
+["admis" if n >= 10 else "refusé" for n in notes]     # ['admis', 'refusé', 'admis', 'refusé']  (4 éléments)
+```
+
+
+On peut parcourir plusieurs itérables avec plusieurs variables ensembles :
+
+``` py
+>>> [x + y for x in [1, 2, 3] for y in [10, 20, 30]] 
+[11, 21, 31, 12, 22, 32, 13, 23, 33]
+ >>> [(x, y) for x in range(2) for y in 'ab']
+ [(0, 'a'), (0, 'b'),  (1, 'a'), (1, 'b')]
+```
+
+
+!!! abstract "Cours" 
+    On peut créer un **tableau par compréhension** en utilisant les syntaxes :
     ``` py
-    >>> carres = []
-    >>> for x in range(10):
-    ...     carres.append(x**2)
-    >>> carres
-    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81
-    ```
-    est equivalent à :
-    ``` py
-    >>> carres = [x**2 for x in range(10)]
-    >>> carres
-    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-    ```
-    ou avec un autre tableau : 
-    ``` py
-    >>> mult_3 = [3 * i for i in [1, 2, 3]]
-    >>> mult_3
-    [3, 6, 9]
-    >>> mult_ = [3 * i for i in [1, 2, 3]]
-    >>> mult_3
-    [3, 6, 9]
-    ```
-
--   avec une fonction : ``` nouveau_tableau = [f(x) for x in ... ] ```
-
-    Exemple : 
-    
-    ``` python
-    >>> def f(x):
-    ...     return 2*x + 3
-    >>> absisses = [1, 2, 3, 5, 10]
-    >>> ordonnees = [f(x) for x in absisses]
-    >>> ordonnees
-    [5, 7, 9, 13, 23]
+    [ expression  for x in  itérable ]
+    [ expression  for x in  itérable  if  condition ]
+    [ expression if condition else autre_expression for x in  itérable ]
+    [ expression(x, y) for x in itérable1 for y in  itérable2]
     ```
 
 
--   avec une condition `if` : ``` nouveau_tableau = [expression(i) for i in ... if condition] ```
 
-    Exemple : 
-    ``` py
-    >>> carre_mult_3 = [x**2 for x in range(10) if x%3 == 0]
-    >>> carre_mult_3
-    [0, 9, 36, 81]
-    ```
-    
--   avec une condition `if...else` : ``` nouveau_tableau = [expression(i) if condition else autre_expression(i) for i in ...] ```
-    (attention l'ordre est différent)
 
-    Exemple :
-    
-    ``` py
-    >>> carre_mult_3_or_0 = [x**2 if x%3 == 0 else 0 for x in range(10)] 
-    >>> carre_mult_3_or_0
-    [0, 0, 0, 9, 0, 0, 36, 0, 0, 81]
+!!! question "Exercice corrigé" 
+	Donner la valeur de chaque expression.
+
+    ```python
+    a = [3 * i for i in range(5)]
+    b = [i for i in range(1, 20) if i % 5 == 0]
+    c = [len(m) for m in ["nsi", "python", "tableau"]]
+    d = ["pair" if i % 2 == 0 else "impair" for i in range(4)]
     ```
 
--   avec plusieurs paramètres  : ``` nouveau_tableau = [expression(i, j) for i in ... for j in ... if condition] ```
+??? Success "Réponse"
 
-    Exemples: 
-    ``` py
-    >>> [x + y for x in [10, 30, 50] for y in [20, 40, 60]]
-    [30, 50, 70, 50, 70, 90, 70, 90, 110]
+    ``` py 
+    a = [0, 3, 6, 9, 12]
+    b = [5, 10, 15]
+    c = [3, 6, 7]
+    d = ['pair', 'impair', 'pair', 'impair']
     ```
+
+
+!!! question "Exercice corrigé" 
+    Réécrire chaque boucle sous forme de compréhension.
+
+    ```python
+    # a)
+    t = []
+    for i in range(10):
+        t.append(i * i + 1)
+
+    # b)
+    t = []
+    for mot in ["chat", "chien", "souris"]:
+        if len(mot) > 4:
+            t.append(mot.upper())
+    ```
+
+??? Success "Réponse"
+
+    ``` py 
+    # a)
+    t = [i * i + 1 for i in range(10)]
+
+    # b)
+    t = [mot.upper() for mot in ["chat", "chien", "souris"] if len(mot) > 4]
+    # ['CHIEN', 'SOURIS']
+    ```
+
  
 ##	Tableaux de tableaux 
 
-Pour finir, il est tout à fait possible de construire des tableaux de p-uplets ou des tableaux de tableaux. Cette fonctionnalité peut parfois être très pratique.
+Il est tout à fait possible de construire un tableau qui contient d'autres tableaux. C'est un **tableau de tableaux**, appelé aussi **tableau à deux dimensions**, ou **matrice**. 
 
 ###	Création d'un tableau de tableaux
 
-On peut créer un tableau qui contient des tableaux :
+Créons d'abord trois tableaux : 
+
 ``` py
->>> t0 = [0, 0, 0]
->>> t1 = [1, 1, 1]
->>> t2 = [2, 2, 2]
->>> t = [t0, t1, t2]
+>>> t_0 = [0, 0, 0]
+>>> t_1 = [1, 1, 1]
+>>> t_2 = [2, 2, 2]
+```
+
+On peut tout à fait créer un tableau qui contient ces trois tableaux :
+``` py
+>>> t = [t_0, t_1, t_2]
 >>> t
 [[0, 0, 0], [1, 1, 1], [2, 2, 2]]
 ```
 
-Il était possible d'écrire directement :
+... mais on pouvait aussi écrire directement :
+
 ``` py
 >>> t = [[0, 0, 0], [1, 1, 1], [2, 2, 2]]
->>> t
-[[0, 0, 0], [1, 1, 1], [2, 2, 2]]
 ```
 
-Il est aussi possible de construire le tableau de tableaux ligne par ligne.
+... ou ligne par ligne avec des boucles :
 
 ``` py
->>> t = []
->>> for i in range(3):
-...     t_i = [i for j in range (3)]
-...     t.append(t_i)
-...     
->>> t
-[[0, 0, 0], [1, 1, 1], [2, 2, 2]]
+t = []
+for i in range(3):
+    t_i = []            # tableau  = [i, i, i]
+    for j in range(3):
+         t_i.append(i)       
+    t.append(t_i)
 ```
 
-Ou par compréhension.
+... ou encore en écrivant `t_i` par compréhension :
 ``` py
->>> t = [[i for j in range (3)] for i in range(3)]
->>> t
-[[0, 0, 0], [1, 1, 1], [2, 2, 2]]
+t = []
+for i in range(3):
+    t_i = [i for j in range(3)]            # tableau  = [i, i, i]
+    t.append(t_i)
 ```
 
+... voire tout le tableau `t_i` par compréhension :
 
-par exemple, cette compréhension de tableaux combine les éléments de deux tableaux  s'ils ne sont pas égaux :
 ``` py
->>> table = [[x, y] for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
->>> table
-[[1, 3], [1, 4], [2, 3], [2, 1], [2, 4], [3, 1], [3, 4]]
+t = [[i for j in range (3)] for i in range(3)]
 ```
+
+La compréhension interne construit une ligne, la compréhension externe construit le tableau de lignes.
+
+:warning: Dans `[[ ... for j in ...] for i in ...]`, la variable `i` désigne le numéro de ligne et `j` le numéro de colonne.
 
 
 !!! question "Exercice corrigé" 
