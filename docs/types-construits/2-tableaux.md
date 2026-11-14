@@ -564,8 +564,8 @@ for i in range(3):
 t = [[i for j in range (4)] for i in range(3)]
 ```
 
-:warning: Par compréhension, la compréhension interne construit une ligne, la compréhension externe construit le tableau de lignes. 
-Les boucles `for j in ...` et `for i in ...` s'écrivent donc à l'inverse du programme avec des boucles imbriquées. :bug: C'est une erreur classique.
+La compréhension interne construit une ligne, la compréhension externe construit le tableau de lignes. 
+Par compréhension, les boucles `for j in ...` et `for i in ...` s'écrivent donc à l'inverse du programme avec des boucles imbriquées. :bug: C'est une cause fréquente d'erreur.
 
 :warning: Quand on écrit `[[ ... for j in ...] for i in ...]`, la variable `i` désigne le numéro de ligne (3 lignes dans l'exemple) et `j` le numéro de colonne (4 colonnes dans l'exemple).
 
