@@ -99,6 +99,21 @@ Lorsqu'aucun indice n'est indiqué à gauche ou à droite du symbole deux-points
 ['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
+On peut aussi avoir un troisième paramètre dans une tranche pour indiquer un pas (*step*) sur le modèle `t[début:fin:pas]` :
+
+``` py
+>>> t = ['a', 'b', 'c', 'd', 'e', 'f']
+>>> t[1:5:2]
+['b', 'd' ]
+```
+
+... ce qui donne la célèbre formule pour inverser l'ordre des éléments d'un tableau (ou d'un chaîne de caractères) :
+
+``` py
+>>> t[::-1]
+['f', 'e', 'd', 'c', 'b', 'a']
+```
+
 Il est aussi possible de disperser, ou « déballer », un tableau en affectant tous ses éléments dans plusieurs variables :
 
 ``` py
@@ -323,7 +338,7 @@ Enfin, `dir(list)` et `help(list)` permet d'obtenir la liste des méthodes dispo
 
 ##	Conversion de type (cast)
 
-Comme la fonction `tuple()`, la fonction `list()` prend en argument un objet séquentiel (une chaine de caractère par exemple) et renvoie le tableau correspondant :
+Comme la fonction `tuple()`, la fonction `list()` prend en argument une séquence (un tuple ou une chaine de caractère, etc.) et renvoie le tableau correspondant :
 
 
 ``` py
@@ -333,12 +348,12 @@ Comme la fonction `tuple()`, la fonction `list()` prend en argument un objet sé
 [1, 2, 3]
 ```
 
-On peut créer un tableau vide avec la fonction list() sans argument.
+On peut créer un tableau vide avec la fonction `list()` sans argument.
 ``` py
 t_vide = list()  
 ```
 
-Nous avons déjà vu l'utilisation de la fonction `range()` . Lorsqu'elle est utilisée en combinaison avec la fonction list(), on obtient une tableau d'entiers. Par exemple :
+Nous avons déjà vu l'utilisation de la fonction `range()` . Lorsqu'elle est utilisée en combinaison avec la fonction `list()`, on obtient une tableau d'entiers. Par exemple :
 
 ``` py
 >>> list(range(10))
@@ -369,7 +384,7 @@ On a vu qu'on pouvait créer un tableau en écrivant tous les éléments à la m
 t = [0, 1, 4, 9, 16]
 ```
 
-Mais cela devient rapidement impossible quand le tableau est grand ! On peut alors utiliser une boucle qui ajoute au tableau les éléments l'un après l'autre avec la méthode `append` :
+Mais cela devient rapidement impossible quand le tableau est grand ! On peut aussi utiliser une boucle qui ajoute au tableau les éléments l'un après l'autre avec la méthode `append` :
 
 ``` py
 t = []
@@ -377,12 +392,12 @@ for i in range(5):
     t.append(i ** 2)
 ```
 
-Il existe une troisième méthode équivalent, mais plus courte et plus lisible : la **compréhension**.
+Il existe une troisième méthode équivalente, mais plus courte et plus lisible : la **compréhension**.
 
 ``` py
 t = [i ** 2 for i in range(5)]
 ```
-On peut lire ça comme « le tableau des i ** 2 pour i allant de 0 à 4 ». C’est très proche de la notation mathématique $\{i^2 \mid i \in [0, 4]\}$.
+On peut lire ça comme « le tableau des i² pour i allant de 0 à 4 ». C’est très proche de la notation mathématique $\{i^2 \mid i \in [0, 4]\}$.
 
 De façon générale, un tableau par compréhension s'écrit sous la forme : `[ expression  for x in  itérable ]`.
 
@@ -402,7 +417,7 @@ doubles = [2 * n for n in [5, 6, 8]]        # [10, 12, 16]
 majuscules = [c.upper() for c in "nsi"]     # ['N', 'S', 'I']
 ```
 
-On peut ne garder que certains éléments en ajoutant une condition `if` placée à la fin, par exemple :
+On peut ne garder que certains éléments en les filtrant avec une condition `if` placée à la fin, par exemple :
 
 ``` py
 # Les nombres pairs de 0 à 9
@@ -420,13 +435,14 @@ notes = [12, 7, 15, 8, 17]
 Le `if` _placé à la fin_ supprime des éléments. On peut aussi utiliser un `if … else` _placé dans l’expression_ pour transformer chaque élément sans en supprimer. :warning: Attention l'ordre est différent. 
 
 ``` py
-notes = [12, 7, 15, 8]
-[n for n in notes if n >= 10]                         # [12, 15]         (2 éléments)
-["admis" if n >= 10 else "refusé" for n in notes]     # ['admis', 'refusé', 'admis', 'refusé']  (4 éléments)
+notes = [12, 7, 15, 8, 17]
+[n for n in notes if n >= 10]                         # [12, 15, 17]         (3 éléments)
+[n if n >= 10 else 10 for n in notes]                 # [12, 10, 15, 10, 17]  (5 éléments)
+["admis" if n >= 10 else "refusé" for n in notes]     # ['admis', 'refusé', 'admis', 'refusé', 'admis']  (5 éléments)
 ```
 
 
-On peut parcourir plusieurs itérables avec plusieurs variables ensembles :
+On peut parcourir plusieurs itérables avec plusieurs variables :
 
 ``` py
 >>> [x + y for x in [1, 2, 3] for y in [10, 20, 30]] 
@@ -437,7 +453,7 @@ On peut parcourir plusieurs itérables avec plusieurs variables ensembles :
 
 
 !!! abstract "Cours" 
-    On peut créer un **tableau par compréhension** en utilisant les syntaxes :
+    On peut créer un **tableau par compréhension** en utilisant les syntaxes suivantes :
     ``` py
     [ expression  for x in  itérable ]
     [ expression  for x in  itérable  if  condition ]
@@ -505,31 +521,31 @@ Il est tout à fait possible de construire un tableau qui contient d'autres tabl
 Créons d'abord trois tableaux : 
 
 ``` py
->>> t_0 = [0, 0, 0]
->>> t_1 = [1, 1, 1]
->>> t_2 = [2, 2, 2]
+>>> t_0 = [0, 0, 0, 0]
+>>> t_1 = [1, 1, 1, 1]
+>>> t_2 = [2, 2, 2, 2]
 ```
 
-On peut tout à fait créer un tableau qui contient ces trois tableaux :
+On peut alors créer un tableau qui contient ces trois tableaux :
 ``` py
 >>> t = [t_0, t_1, t_2]
 >>> t
-[[0, 0, 0], [1, 1, 1], [2, 2, 2]]
+[[0, 0, 0, 0], [1, 1, 1, 1], [2, 2, 2, 2]]
 ```
 
-... mais on pouvait aussi écrire directement :
+... mais on pouvait aussi le créer directement :
 
 ``` py
->>> t = [[0, 0, 0], [1, 1, 1], [2, 2, 2]]
+>>> t = [[0, 0, 0, 0], [1, 1, 1, 1], [2, 2, 2, 2]]
 ```
 
-... ou ligne par ligne avec des boucles :
+... ou ligne par ligne dans un programme avec des boucles `for` imbriquées :
 
 ``` py
 t = []
 for i in range(3):
-    t_i = []            # tableau  = [i, i, i]
-    for j in range(3):
+    t_i = []   # t_i = [i, i, i, i]
+    for j in range(4):
          t_i.append(i)       
     t.append(t_i)
 ```
@@ -538,19 +554,22 @@ for i in range(3):
 ``` py
 t = []
 for i in range(3):
-    t_i = [i for j in range(3)]            # tableau  = [i, i, i]
+    t_i = [i for j in range(4)]  # t_i = [i, i, i, i]
     t.append(t_i)
 ```
 
-... voire tout le tableau `t_i` par compréhension :
+... voire tout le tableau `t` par compréhension :
 
 ``` py
-t = [[i for j in range (3)] for i in range(3)]
+t = [[i for j in range (4)] for i in range(3)]
 ```
 
-La compréhension interne construit une ligne, la compréhension externe construit le tableau de lignes.
+:warning: Par compréhension, la compréhension interne construit une ligne, la compréhension externe construit le tableau de lignes. 
+Les boucles `for j in ...` et `for i in ...` s'écrivent donc à l'inverse du programme avec des boucles imbriquées. :bug: C'est une erreur classique.
 
-:warning: Dans `[[ ... for j in ...] for i in ...]`, la variable `i` désigne le numéro de ligne et `j` le numéro de colonne.
+:warning: Quand on écrit `[[ ... for j in ...] for i in ...]`, la variable `i` désigne le numéro de ligne (3 lignes dans l'exemple) et `j` le numéro de colonne (4 colonnes dans l'exemple).
+
+
 
 
 !!! question "Exercice corrigé" 
