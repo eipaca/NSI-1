@@ -131,7 +131,7 @@ True
 False
 ```
 
-De façon très similaire aux p-uplets, le mot clé `in` permet aussi d'écrire une boucle pour parcourir (ou «itérer») toutes les valeurs d'un tableau. Comparons à nouveau différentes méthodes pour parcourir un tableau `t` :
+De façon très similaire aux p-uplets, le mot clé `in` permet aussi d'écrire une boucle pour parcourir (ou «itérer») toutes les valeurs d'un tableau. Comparons à nouveau différentes approches pour parcourir un tableau `t` :
 
 
 === "Avec une boucle non bornée `while`"
@@ -179,7 +179,7 @@ De façon très similaire aux p-uplets, le mot clé `in` permet aussi d'écrire 
     ```
 
 
-La boucle `for elem in t` est plus simple pour parcourir les valeurs d'un tableau, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce tableau, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les deux autres méthodes.
+La boucle `for elem in t` est plus simple pour parcourir les valeurs d'un tableau, par exemple pour rechercher la plus petite ou la plus grande valeur dans ce tableau, mais elle ne permet pas d'accéder à sa position. Pour accéder à la position d'une valeur que l'on recherche, il faut utiliser les deux autres approches.
 
 
 
@@ -329,7 +329,7 @@ Pour trouver un élément dans un tableau :
     2
     ```
 
-Enfin, `dir(list)` et `help(list)` permet d'obtenir la liste des méthodes disponibles.
+Enfin, `dir(list)` et `help(list)` permet d'obtenir la liste des méthodes du type `list`.
 
 
 !!! note "" 
@@ -360,7 +360,7 @@ Nous avons déjà vu l'utilisation de la fonction `range()` . Lorsqu'elle est ut
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-La méthode `.split()` permet de découper une chaîne en tableau avec un séparateur  : `chaine.split(separateur)`.
+La méthode `split()` permet de découper une chaîne en tableau avec un séparateur  : `chaine.split(separateur)`.
 
 ``` py
 >>> chaine = 'Bonjour tout le monde !'
@@ -368,7 +368,7 @@ La méthode `.split()` permet de découper une chaîne en tableau avec un sépar
 ['Bonjour', 'tout', 'le', 'monde', '!']
 ```
 
-Réciproquement la méthode `.join()` permet de convertir un tableau en chaîne de caractères en insérant le paramètre entre les éléments du tableau: `elementSeparateur.join(t)```.
+Réciproquement la méthode `join()` permet de convertir un tableau en chaîne de caractères en insérant le paramètre entre les éléments du tableau: `elementSeparateur.join(t)```.
 
 ``` py
 >>> t = ['Bonjour', 'tout', 'le', 'monde', '!']
@@ -384,7 +384,7 @@ On a vu qu'on pouvait créer un tableau en écrivant tous les éléments à la m
 t = [0, 1, 4, 9, 16]
 ```
 
-Mais cela devient rapidement impossible quand le tableau est grand ! On peut aussi utiliser une boucle qui ajoute au tableau les éléments l'un après l'autre avec la méthode `append` :
+Mais cela devient rapidement impossible quand le tableau est grand ! On peut aussi utiliser une boucle qui ajoute au tableau les éléments l'un après l'autre avec la méthode `append()` :
 
 ``` py
 t = []
@@ -392,7 +392,7 @@ for i in range(5):
     t.append(i ** 2)
 ```
 
-Il existe une troisième méthode équivalente, mais plus courte et plus lisible : la **compréhension**.
+Il existe une troisième approche, plus courte et plus lisible : la **compréhension**.
 
 ``` py
 t = [i ** 2 for i in range(5)]
@@ -410,7 +410,7 @@ Exemples :
 ["a" for _ in range(3)]            # ['a', 'a', 'a']
 ```
 
-L’itérable peut être un tableau, un tuple, une chaîne de caractères, etc.
+L’itérable peut aussi être un tableau, un tuple, une chaîne de caractères, etc.
 
 ``` py
 doubles = [2 * n for n in [5, 6, 8]]        # [10, 12, 16]
@@ -442,7 +442,7 @@ notes = [12, 7, 15, 8, 17]
 ```
 
 
-On peut parcourir plusieurs itérables avec plusieurs variables :
+Enfin, on peut parcourir plusieurs itérables avec plusieurs variables :
 
 ``` py
 >>> [x + y for x in [1, 2, 3] for y in [10, 20, 30]] 
@@ -629,7 +629,7 @@ On dit que cette matrice a 2 dimensions et est de taille 3 x 3. Les éléments s
 
 
 !!! question "Exercice corrigé" 
-	Écrire une fonction `lucas(a, b, c)` prenant en paramètres 3 entiers relatifs `a`, `b` et `c` , vérifie par asserts que  `0 < a < b < c – a` et `b ≠ 2a` puis renvoie le carré magique 3x3 en utilisant la méthode d’Édouard Lucas sous forme d'un tableau de tableaux :
+	Écrire une fonction `lucas(a, b, c)` prenant en paramètres 3 entiers relatifs `a`, `b` et `c` , vérifie par asserts que  `0 < a < b < c – a` et `b ≠ 2a` puis renvoie le carré magique 3x3 en utilisant les formules d’Édouard Lucas sous forme d'un tableau de tableaux :
 
 
     ||||
@@ -810,7 +810,7 @@ Les deux variables `t` et `u` ne sont pas deux objets différents mais **deux no
 
 Pour copier un tableau , il faut créer une **copie explicite** du tableau initial.  Cela peut se faire de plusieurs manières[^2.6] :
 
-[^2.6]: :warning:Aucune de ces approches ne fonctionne pour un tableau de tableaux, il faut par exemple utiliser la méthode `.deepcopy()` du module `copy`. 
+[^2.6]: :warning:Aucune de ces approches ne fonctionne pour un tableau de tableaux, il faut par exemple utiliser la méthode `deepcopy()` du module `copy`. 
 
 - Avec `t[:]` qui créé une copie *des données* du tableau `t` (en opposition à une copie du tableau `t`) :
 ``` py
@@ -823,11 +823,10 @@ Pour copier un tableau , il faut créer une **copie explicite** du tableau initi
 >>> u = list(t)
 ```
 
-- Ou encore utiliser la méthode `.copy()` :
+- Ou encore utiliser la méthode `copy()` :
 ```
 >>> u = t.copy()
 ```
- 
 
 
 ###	Tableau passé en paramètre de fonction
@@ -884,7 +883,7 @@ On peut initialiser un tableau avec une valeur par défaut pour tous les éléme
 [0, 0, 0]
 ```
 
-Mais attention à ne pas utiliser cette méthode pour des tableaux de tableaux :
+Mais attention à ne pas utiliser cette approche pour des tableaux de tableaux :
 ``` py
 >>> t = [[0] * 3] * 3
 >>> t
@@ -901,7 +900,7 @@ De la même façon, on ne doit pas définir une valeur par défaut de paramètre
 [^2.10]: Voir [https://docs.python.org/fr/3/tutorial/controlflow.html#default-argument-values](https://docs.python.org/fr/3/tutorial/controlflow.html#default-argument-values).
 
 ``` py
-def ajouter(a, L = []):
+def ajouter(a, L=[]):
     L.append(a)
     return L
 ```
