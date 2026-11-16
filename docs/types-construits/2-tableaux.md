@@ -685,6 +685,15 @@ t = [[ 3*i + j + 1 for j in range(3)] for i in range(4)]
 
 
 
+Quand on n'a pas besoin des indices de ligne et de colonne, on peut aussi tout simplement parcourir le
+tableau de tableaux par valeurs :
+
+``` py
+for ligne in t:   # Boucle sur les lignes (sous-tableaux) de t
+    for elem in ligne:   # Boucle sur les éléments de la ligne
+	    print(elem)
+```
+
 
 
 
