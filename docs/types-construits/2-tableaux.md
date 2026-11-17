@@ -569,7 +569,7 @@ for i in range(3):
 ... voire tout le tableau `t` par compréhension :
 
 ``` py
-t = [[i for j in range (4)] for i in range(3)]
+t = [[i for j in range(4)] for i in range(3)]
 ```
 
 La compréhension interne construit les sous-tableaux, la compréhension externe construit le tableau de tableaux. 
