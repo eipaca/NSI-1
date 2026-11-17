@@ -333,7 +333,7 @@ Enfin, `dir(list)` et `help(list)` permet d'obtenir la liste des méthodes du ty
 
 
 !!! note "" 
-    Les méthodes telles que `insert()`, `remove()` ou `sort()`, qui ne font que modifier le tableau, ne renvoient pas de valeur (ou plutôt elles renvoient `None`).
+    Les méthodes telles que `append()`, `insert()`, `remove()` ou `sort()`, qui ne font que modifier le tableau, renvoient `None`. :bug: Attention de ne pas écrire `t = t.append('x')`, sinon `t` prend la valeur `None` !
 
 
 ##	Conversion de type (cast)
