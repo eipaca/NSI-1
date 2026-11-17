@@ -3,7 +3,7 @@
 !!! abstract "Cours" 
     Un **tableau** est une suite **ordonnée** d'éléments qui peuvent être **modifiés** (muables[^2.1]).
 
-    En Python les tableaux sont du type `list`. Par abus de langage on francise le terme en « **liste** » pour désigner un tableau Python.[^2.2]
+    En Python, les tableaux sont du type `list`. Par abus de langage, on francise le terme en « **liste** » pour désigner un tableau Python.[^2.2]
 
 [^2.1]: ou *mutable* en anglais.
 
@@ -107,7 +107,7 @@ On peut aussi avoir un troisième paramètre dans une tranche pour indiquer un p
 ['b', 'd' ]
 ```
 
-... ce qui donne la célèbre formule pour inverser l'ordre des éléments d'un tableau (ou d'un chaîne de caractères) :
+... ce qui donne la célèbre formule pour inverser l'ordre des éléments d'un tableau (ou d'une chaîne de caractères) :
 
 ``` py
 >>> t[::-1]
