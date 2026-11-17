@@ -3,11 +3,11 @@
 !!! abstract "Cours" 
     Un **tableau** est une suite **ordonnée** d'éléments qui peuvent être **modifiés** (muables[^2.1]).
 
-    En Python les tableaux sont du type `list`[^2.2].
+    En Python les tableaux sont du type `list`. Par abus de langage on francise le terme en « *liste* » pour désigner un tableau.[^2.2]
 
 [^2.1]: ou *mutable* en anglais.
 
-[^2.2]: Par abus de langage on francise parfois le terme en « liste » pour désigner un tableau.
+[^2.2]: On étudie en classe de terminale la différence entre une liste et un tableau en informatique.
 
 
 ##	Création
