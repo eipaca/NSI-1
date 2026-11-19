@@ -269,7 +269,7 @@ On constate que quand on calcule deux fois le complément à 2 d'un nombre, on r
 
 Prenons par exemple le nombre 5 sur 4 bits, il s'écrit 0101. Si on calcule son premier complément à 2, on obtient 1011, c'est à dire -5. Calculons à nouveau son complément à 2, on obtient à nouveau 0101, c'est à dire le nombre de départ : 5.
 
-Mathématiquement, c'est logique puisque le complément à 2 est une opération qui calcule l'opposé d'un nombre : le complément à 2 d'un nombre x est -x, le complément à 2 de -x redonne -(-x) = x, c'est le nombre x de départ. 
+Mathématiquement, c'est logique puisque le complément à 2 est une opération qui calcule l'opposé d'un nombre : le complément à 2 d'un nombre x est -x, le complément à 2 de -x est -(-x), c'est le nombre x de départ. 
 
 
 Pour décoder un nombre négatif binaire, il suffit donc d'appliquer une nouvelle fois le complément à 2.
