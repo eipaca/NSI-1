@@ -200,8 +200,8 @@ On constate facilement qu'en ajoutant un nombre binaire à son complément à 1,
 
 On en déduit, qu'en ajoutant 1 au complément à 1 d'un nombre binaire $x$ on obtient l'opposé de $x$, c'est-à-dire $-x$. C'est le « **complément à 2** »[^2.2] !
 
-- $5_{10}$  s'écrit 0101 en binaire sur 4 bits. Son complément à 1 est 1010,  son complément à 2 est 1011. On peut vérifier que 0101 + 1011 = 0000 sur 4 bits (le 1 au début disparait), 1011 est bien l'opposé de 5, c'est à dire $-5_{10}$
-- $42_{10}$ s'écrit 0010 1010 en binaire  sur 8 bits. Son complément à 1 est 1101 0101, son complément à 2 est 1101 0110. On peut vérifier que 0010 1010 + 1101 0110 = 0000 0000 sur 8 bits (le 1 au début disparait), 1101 0110 est bien l'opposé de 42, c'est à dire $-42_{10}$.
+- $5_{10}$  s'écrit 0101 en binaire sur 4 bits. Son complément à 1 est 1010,  son complément à 2 est 1011. On peut vérifier que 0101 + 1011 = 0000 sur 4 bits (le 1 au début disparait), 1011 est bien l'opposé de 5, c'est-àdire $-5_{10}$
+- $42_{10}$ s'écrit 0010 1010 en binaire  sur 8 bits. Son complément à 1 est 1101 0101, son complément à 2 est 1101 0110. On peut vérifier que 0010 1010 + 1101 0110 = 0000 0000 sur 8 bits (le 1 au début disparait), 1101 0110 est bien l'opposé de 42, c'est-à-dire $-42_{10}$.
 
 [^2.2]: Il y a une exception avec le nombre le plus négatif représentable (par exemple -8 sur 4 bits : 1000). Si on fait son complément à 2, on obtient... 1000 à nouveau, car il n'y a pas de +8 représentable en complément à 2 sur 4 bits (le maximum est +7).
 
@@ -267,7 +267,7 @@ Noter que sur 8 bits (1 octet) on obtient  :
 
 On constate que quand on calcule deux fois le complément à 2 d'un nombre, on retrouve le nombre d'origine ! 
 
-Prenons par exemple le nombre 5 sur 4 bits, il s'écrit 0101. Si on calcule son premier complément à 2, on obtient 1011, c'est à dire -5. Calculons à nouveau son complément à 2, on obtient à nouveau 0101, c'est à dire le nombre de départ : 5.
+Prenons par exemple le nombre 5 sur 4 bits, il s'écrit 0101. Si on calcule son premier complément à 2, on obtient 1011, c'est-à-dire -5. Calculons à nouveau son complément à 2, on obtient à nouveau 0101, c'est-à-dire le nombre de départ : 5.
 
 Mathématiquement, c'est logique puisque le complément à 2 est une opération qui calcule l'opposé d'un nombre : le complément à 2 d'un nombre x est -x, le complément à 2 de -x est -(-x), c'est le nombre x de départ. 
 
