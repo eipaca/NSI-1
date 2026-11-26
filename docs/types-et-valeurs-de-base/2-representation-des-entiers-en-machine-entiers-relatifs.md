@@ -122,13 +122,13 @@ L'idée du complément à 2 et de partager la plage de nombres binaires disponib
     |0   |1   |2   |3   |4   |5   |6   |7   |
 
 
--   La seconde moitié, contenant les $2^{n-1}$ nombres binaires suivants, permet de représenter les entiers positifs entre $-2^{n-1}$ et $-1$. Par exemple sur 4 bits :
+-   La seconde moitié, contenant les $2^{n-1}$ nombres binaires suivants, permet de représenter les entiers négatifs compris entre $-2^{n-1}$ et $-1$. Par exemple sur 4 bits :
 
     |1000|1001|1010|1011|1100|1101|1110|1111|
     |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
     |-8  |-7  |-6  |-5  |-4  |-3  |-2  |-1  |
 
-Autrement dit, on convertit en binaire un nombre négatif en ajoutant $2^n$ à sa valeur[^2.1]. Par exemple sur 4 bits :
+Autrement dit, on code un nombre négatif en binaire en ajoutant $2^n$ à sa valeur[^2.1]. Par exemple sur 4 bits :
 
 - $-1$ est représenté par $-1 + 16 = 15$ en binaire : 1111.
 - $-2$ est représenté par $-2 + 16 = 14$ en binaire : 1110.
@@ -137,7 +137,7 @@ Autrement dit, on convertit en binaire un nombre négatif en ajoutant $2^n$ à s
 
 [^2.1]: D'où le nom « complément à 2 puissance n », tronqué en « complément à 2 ».
 
-On observe immédiatement un premier avantage du complément à 2 : il permet d'identifier directement le signe d'un nombre juste avec son premier bit :  $0$ pour les nombres négatifs, $1$ pour les positifs. Ce premier bit est appelé « **bit de signe** ».
+On observe immédiatement un premier avantage du complément à 2 : il permet d'identifier directement le signe d'un nombre juste avec son premier bit :  $0$ pour les nombres positifs, $1$ pour les négatifs. Ce premier bit est appelé « **bit de signe** ».
 
 On peut toujours représenter $2^n$ nombres entiers relatifs sur n bits avec le complément à 2, mais à la différence des nombres positifs, les entiers représentés vont de $−2^{n-1}$ à $2^{n-1} - 1$.
 
