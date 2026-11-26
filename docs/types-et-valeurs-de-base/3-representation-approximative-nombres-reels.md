@@ -305,13 +305,13 @@ où :
 La valeur stockée est donc : $(-1)^{S} \times 1,mantisse \times 2^{exposant}$.
 
 
-Prenons par exemple 5,75 codé sur 32 bits. $5.75_{10}$ s'écrit en binaire $101.11_2 = 1.0111 \times  2^3$. On obtient :
+Prenons par exemple 5,75 codé sur 32 bits. $5.75_{10}$ s'écrit en binaire $101.11_2 = 1.0111 \times  2^2$. On obtient :
 
 - Signe S = $0$ (positif)
-- Exposant : $3 + 127 = 130 = 10000010_2$
+- Exposant : $2 + 127 = 129 = 10000001_2$
 - Mantisse : $0111 0000 0000 0000 0000 000$
 
-En machine, 5,75 sera codé sur 32 bits en `0 10000010 01110000000000000000000`.
+En machine, 5,75 sera codé sur 32 bits en `0 10000001 01110000000000000000000`.
 
 
 
